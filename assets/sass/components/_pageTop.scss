@@ -1,0 +1,21 @@
+.pagetop {
+    background: #5A5A5A;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding: 15px 0;
+    color: $white;
+    font-weight: bold;
+    @include fs(12);
+    line-height: 1;
+
+    &:hover {
+        @include alpha;
+    }
+
+    i,
+    svg {
+        margin: 5px 5px 0 0;
+        @include fs(15);
+    }
+}

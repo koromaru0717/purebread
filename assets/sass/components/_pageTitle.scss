@@ -1,0 +1,21 @@
+.pageTitle {
+	padding: 30px 0;
+	text-align: center;
+	background: $brown;
+	@include cf;
+	color: $white;
+	display: block;
+	text-align: center;
+	font-weight: normal;
+	@include fs(28);
+
+	span {
+		display: block;
+		text-align: center;
+		font-weight: normal;
+		@include fs(14);
+	}
+}
+@media #{$smartphone} {
+	.banner {}
+}

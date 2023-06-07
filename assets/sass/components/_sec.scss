@@ -1,0 +1,42 @@
+.sec {
+	padding: 50px 0;
+	@include cf;
+
+	&.sec-bg {
+		background: repeating-linear-gradient(-45deg, #fff 0px, #fff 2px, #fafafa 2px, #fafafa 4px);
+	}
+
+	&.sec-border {
+		border-top: 1px solid #eee;
+	}
+
+	.sec_inner {
+		@include container;
+	}
+
+	.sec_body {}
+
+	.sec_row {
+		@include flex-row;
+	}
+
+	.sec_header {
+		margin: 0 0 30px;
+	}
+
+	.sec_footer {}
+
+	.sec_btn {
+		max-width: 600px;
+		margin: 30px auto;
+	}
+}
+@media #{$smartphone} {
+	.sec {
+		padding: 30px 0;
+
+		.sec_btn {
+			@include max;
+		}
+	}
+}

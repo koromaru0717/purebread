@@ -1,0 +1,39 @@
+//color
+$c-border: #707070;
+$brown: #70462E;
+$gray: #F5F5F5;
+$black: #000;
+$white: #fff;
+$transparent: rgba(#fff, 0.3);
+$footer: #292929;
+$topics: #0293AD;
+$event: #C9AA00;
+$light-gray: #ccc;
+$sky: #0293AD;
+
+$colors: (
+  "c-border": $c-border,
+  "brown": $brown,
+  "gray": $gray,
+  "black": $black,
+  "white": $white,
+  "transparent": $transparent,
+  "topics": $topics,
+  "event": $event,
+  "sky": $sky,
+);
+
+// font
+$sans-serif: Helvetica Neue, Helvetica, Hiragino Sans, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, "メイリオ", Meiryo, sans-seri;
+$serif: 游明朝, "Yu Mincho", YuMincho, "Hiragino Mincho ProN", HGS明朝E, メイリオ, Meiryo, serif;
+$Normal: $sans-serif;
+
+//responsible
+$smartphone: "only screen and (max-width: 767px)";
+$desktop: "only screen and (min-width: 768px)";
+$middle: "only screen and (min-width: 768px) and (max-width: 1169px)"; // 1020 + 150
+$small: "only screen and (min-width: 768px) and (max-width: 991px)";
+$sm: "only screen and (min-width: 576px)";
+$md: "only screen and (min-width: 768px)";
+$lg: "only screen and (min-width: 992px)";
+$xl: "only screen and (min-width: 1200px)";

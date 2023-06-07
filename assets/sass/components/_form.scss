@@ -1,0 +1,53 @@
+.form {
+	.form_row {
+		padding: 15px;
+		width: 100%;
+		@include flex;
+
+		.form_label {
+			width: 200px;
+			@include fs(14);
+
+			span {
+				color: $sky;
+				border: 1px solid $sky;
+				padding: 2px 5px;
+				margin-left: 20px;
+				@include fs(12);
+			}
+		}
+
+		.form_content {
+			width: calc(100% - 200px);
+
+			input,
+			textarea {
+				width: 100%;
+				padding: 15px 10px;
+				@include radius;
+				border: 1px solid $brown;
+			}
+
+			textarea {
+				min-height: 200px;
+			}
+
+			&.form_content-tel {
+				input {
+					width: 6em;
+				}
+			}
+		}
+	}
+
+	.form_row-center {
+		justify-content: center;
+	}
+}
+@media #{$smartphone} {
+	.form {
+		.form_content {
+			margin-top: 15px;
+		}
+	}
+}

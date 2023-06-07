@@ -1,0 +1,51 @@
+.bnr {
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: block;
+    text-decoration: none;
+    height: 200px;
+    @include fs(28);
+
+    .bnr_inner {
+        width: 100%;
+        height: 200px;
+        color: $white;
+        @include flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(0, 0, 0, 0.5);
+
+        span {
+            @include fs(14);
+            font-weight: bold;
+            display: block;
+        }
+    }
+
+    &:hover {
+        .bnr_inner {
+            background: rgba(0, 0, 0, 0.2);
+        }
+    }
+}
+
+.bnr-about {
+    background: url("../images/about_bnr.png") no-repeat;
+}
+
+.bnr-access {
+    background: url("../images/access_bnr.png") no-repeat;
+}
+@media #{$smartphone} {
+    .bnr {
+        margin: 0 auto 30px;
+        background-position: center center;
+
+        .bnr_inner {
+            padding: 80px 10px;
+        }
+    }
+}

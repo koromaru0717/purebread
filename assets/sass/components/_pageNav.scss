@@ -1,0 +1,31 @@
+.pageNav {
+	padding: 0 15px;
+
+	ul {
+		display: flex;
+		justify-content: center;
+
+		li {
+			border-left: 1px solid $brown;
+			margin-bottom: 0;
+			line-height: 1;
+
+			&:last-child {
+				border-right: 1px solid $brown;
+			}
+
+			a,
+			span {
+				color: $brown;
+				padding: 5px 15px;
+				white-space: nowrap;
+				cursor: pointer;
+				@include fs(16);
+
+				&:hover {
+					opacity: 0.7;
+				}
+			}
+		}
+	}
+}

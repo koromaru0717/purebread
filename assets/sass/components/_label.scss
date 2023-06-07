@@ -1,0 +1,16 @@
+.label {
+    line-height: 1;
+    display: inline-block;
+    padding: 5px 10px;
+    @include fs(10);
+}
+@each $name, $color in $colors {
+    .label-#{$name} {
+        color: $color;
+        border: 1px solid $color;
+
+        a {
+            color: $color;
+        }
+    }
+}

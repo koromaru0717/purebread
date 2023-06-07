@@ -1,0 +1,24 @@
+.sns {
+	@include flex;
+	justify-content: center;
+
+	li {
+		margin: 0 15px !important;
+		@include flex;
+		align-items: center;
+		justify-content: center;
+		border: 1px solid $brown;
+		border-radius: 50%;
+		width: 30px;
+		height: 30px;
+
+		svg {
+			color: $brown;
+		}
+	}
+}
+@media #{$smartphone} {
+	.sns {
+		margin: 0 auto;
+	}
+}

@@ -1,0 +1,58 @@
+.contact {
+    @include flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px auto;
+    .contact_icon {
+        @include fs(35);
+        margin-right: 15px;
+    }
+
+    .contact_body {
+        p {
+            @include fs(13);
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+
+            span {
+                display: block;
+                font-weight: bold;
+                @include fs(34);
+            }
+        }
+    }
+
+    .contact_btn {
+        max-width: 560px;
+        margin: 0 auto;
+    }
+}
+@media #{$smartphone} {
+    .contact {
+        .contact_tel {
+            margin: 15px auto;
+
+            .contact_tel_icon {
+                @include fs(35);
+                margin-right: 15px;
+            }
+
+            .contact_tel_body {
+                p {
+                    @include fs(12);
+                    margin: 0;
+                    padding: 0;
+                }
+
+                span {
+                    font-size: 2.4rem;
+                }
+            }
+        }
+
+        .contact_btn {
+            @include max;
+        }
+    }
+}

@@ -1,0 +1,141 @@
+body {
+    color: #333;
+    font-family: $serif;
+}
+
+.font-normal {
+    font-family: $Normal;
+}
+
+button,
+input,
+select,
+textarea {
+    font-family: arial, helvetica, clean, sans-serif;
+    @include fs(14);
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: monospace;
+    line-height: 100%;
+    @include fs(14);
+}
+
+blockquote,
+dl,
+ol,
+pre,
+td,
+th,
+ul {
+    line-height: 1.5;
+    @include fs(14);
+}
+
+p {
+    line-height: 1.5;
+    @include fs(16);
+}
+
+dl,
+ol,
+ul {
+    list-style-position: outside;
+    @include fs(14);
+}
+
+.supp {
+    @include fs(12);
+}
+
+blockquote p,
+dd p,
+dl p,
+dt p,
+ol p,
+pre p,
+td p,
+th p,
+ul p {
+    @include fs(14);
+    padding: 10px 0;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+em {
+    font-weight: bold;
+}
+
+b {
+    font-weight: bold;
+}
+// Base Link
+a {
+    color: #333;
+    text-decoration: underline;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+//Font
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+
+    a {
+        font-weight: bold;
+    }
+}
+@media #{$smartphone} {
+    blockquote,
+    dl,
+    ol,
+    pre,
+    td,
+    th,
+    ul {
+        @include fs(12);
+    }
+
+    p {
+        @include fs(12);
+        padding: 5px 0;
+    }
+
+    dl,
+    ol,
+    ul {
+        @include fs(12);
+    }
+
+    .supp {
+        @include fs(10);
+    }
+
+    blockquote p,
+    dd p,
+    dl p,
+    dt p,
+    ol p,
+    pre p,
+    td p,
+    th p,
+    ul p {
+        @include fs(12);
+        padding: 5px 0;
+    }
+}

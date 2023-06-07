@@ -1,0 +1,152 @@
+@import "_config";
+@import "base/_mixin";
+@import "libs/bootstrap/_bootstrap-grid";
+@import "blocks/_menu";
+@import "components/_news";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0px 0;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #70462E;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+h4 {
+    font-size: 18px;
+}
+
+h5 {
+    font-size: 16px;
+}
+
+h6 {
+    font-size: 14px;
+}
+
+p {}
+
+strong {
+    color: #70462E;
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+    font-weight: bold;
+}
+
+figure{
+    margin-bottom: 15px;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    width: 100%;
+    td,th{
+        padding: 15px;
+        vertical-align: top;
+    }
+    th{
+        font-weight: bold;
+    }
+}
+
+ul,
+ol {
+    padding: 1em 0 1em 2em;
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+li {}
+
+iframe{
+    &.googlemap{
+        width: 100%;
+        height: 300px;
+    }
+}
+
+// Gutenberg
+.alignwide{
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+}
+.alignfull{
+    margin-left: calc( -100vw / 2 + 100% / 2 );
+    margin-right: calc( -100vw / 2 + 100% / 2 );
+    max-width: 100vw;
+}
+
+// // supports
+// .wp-block{
+//     border: 1px dotted #f2f2f2;
+//     &:hover{
+//         border: 1px solid #ddd;
+//         .wp-block-columns{
+//             .wp-block{
+//                 border: 1px solid #ddd;
+//                 &.is-selected{
+//                     border: 1px solid transparent;
+//                 }
+//             }
+//             .wp-block[data-type="core/column"]{
+//                 border: 1px solid transparent;
+//             }
+//         }
+//     }
+//     &.is-selected{
+//         border: 1px solid transparent;
+//     }
+// }
+//
+// .block-editor-block-list__layout {
+//     >.block-editor-block-list__block{
+//         >.block-editor-block-list__block-edit{
+//             margin-top: 15px;
+//             margin-bottom: 15px;
+//         }
+//     }
+// }
+
+ 
+@media #{$sm} {
+}
+@media #{$md} {
+}
+@media #{$lg} {
+}
+@media #{$xl} {
+    .content {
+        iframe{
+            &.googlemap{
+                height: 450px;
+            }
+        }
+    }
+}

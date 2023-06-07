@@ -1,0 +1,154 @@
+@mixin bg-image($image-width, $image-height, $background-size: contain) {
+  background-size: $background-size;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 0;
+  padding-bottom: percentage($image-height / $image-width);
+  display: block;
+}
+
+@mixin clearfix {
+  *zoom: 1;
+
+  &::before,
+  &::after {
+    content: " ";
+    display: block;
+    line-height: 0;
+  }
+
+  &::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+@mixin cf {
+  @include clearfix;
+}
+
+@mixin fluid($width: $site_width) {
+  margin: auto;
+  width: $width;
+
+  @include clearfix;
+  @media #{$smartphone} {
+    width: auto;
+  }
+}
+
+@mixin container-fluid {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: $space;
+  padding-right: $space;
+  width: $site_width;
+
+  @include clearfix;
+  @media #{$smartphone} {
+    width: auto;
+  }
+}
+
+@mixin container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media (min-width: 576px) {
+        max-width: 540px;
+    }
+
+    @media (min-width: 768px) {
+        max-width: 720px;
+    }
+
+    @media (min-width: 992px) {
+        max-width: 960px;
+    }
+
+    @media (min-width: 1200px) {
+        max-width: 1140px;
+    }
+}
+
+// Font Size
+@mixin fs($size) {
+  font-size: $size+px;
+  @media #{$smartphone} {
+    @if $size >=18 {
+      font-size: 18px;
+    }
+    @else {
+      font-size: $size+px;
+    }
+  }
+}
+// Font Size (!important)
+@mixin _fs($size) {
+  font-size: $size+px !important;
+  @media #{$smartphone} {
+    font-size: $size+px !important;
+  }
+}
+
+
+@mixin under-none {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@mixin hover($alpha: 0.8) {
+  a:hover {
+    img {
+      opacity: $alpha;
+    }
+  }
+}
+@mixin alpha($alpha: 0.8) {
+  opacity: $alpha;
+}
+
+@mixin full {
+  height: auto;
+  width: 100%;
+}
+
+@mixin max {
+  height: auto;
+  max-width: 100%;
+}
+
+@mixin radius ($topLeft: 5px, $topRight: 5px, $bottomRight: 5px, $bottomLeft: 5px) {
+  border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+}
+
+// アニメーション
+@mixin animetion($time: 0.5s) {
+  @include css3(transition, $time);
+}
+
+// flex IE対策
+@mixin flex {
+    display: flex;
+    -js-display: flex;
+}
+
+@mixin flex-row {
+    @include flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+// 円形画像のIE対策
+@mixin ofi(){
+  object-fit: cover;
+  font-family: 'object-fit: cover;'
+}

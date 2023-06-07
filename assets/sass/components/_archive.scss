@@ -1,0 +1,52 @@
+.archive {
+	border: 1px solid $light-gray;
+	margin-bottom: 30px;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	.archive_title {
+		@include fs(16);
+		padding: 20px 10px;
+		line-height: 1;
+		border-bottom: 1px solid $light-gray;
+	}
+
+	.archive_list {
+		li {
+			margin: 0;
+			border-bottom: 1px solid $light-gray;
+			line-height: 1;
+
+			&:last-child {
+				border-bottom: none;
+			}
+
+			a {
+				padding: 20px 10px;
+				display: block;
+				text-decoration: none;
+				position: relative;
+				line-height: 1;
+				transition: all 300ms 0s ease;
+				&:after {
+					font-weight: 900;
+					position: absolute;
+					top: 50%;
+					right: 10px;
+					display: block;
+					margin-top: -0.5em;
+					@include fs(14);
+					content: '\f105';
+					font-family: 'Font Awesome 5 Free';
+					color: #bbb;
+				}
+
+				&:hover {
+					background-color: rgba($brown, 0.1);
+				}
+			}
+		}
+	}
+}

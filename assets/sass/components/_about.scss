@@ -1,0 +1,23 @@
+.about {
+	.about_pic {
+		img {
+			width: 100%;
+		}
+	}
+
+	.about_body {
+		padding: 50px 0;
+	}
+
+	.about_title {
+		text-align: center;
+		@include fs(28);
+	}
+
+	.about_desc {
+		p {
+			@include fs(16);
+			margin: 30px auto;
+		}
+	}
+}

@@ -1,0 +1,35 @@
+.address {
+	.address_map {
+		iframe {
+			width: 100%;
+			height: 300px;
+		}
+	}
+
+	.address_table {
+		margin-top: 10px;
+		width: 100%;
+
+		td,
+		th {
+			padding: 10px;
+			border: 1px solid #ddd;
+			@include fs(12);
+		}
+
+		th {
+			text-align: left;
+			font-weight: bold;
+			white-space: nowrap;
+		}
+	}
+}
+@media #{$smartphone} {
+	.address {
+		.address_map {
+			iframe {
+				height: 200px;
+			}
+		}
+	}
+}

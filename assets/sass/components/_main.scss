@@ -1,0 +1,28 @@
+.main {
+	padding: 50px 0;
+
+	.main_title {
+		display: block;
+		text-align: center;
+		font-weight: bold;
+		@include fs(28);
+		padding-bottom: 30px;
+
+		span {
+			display: block;
+			text-align: center;
+			font-weight: normal;
+			@include fs(14);
+		}
+	}
+
+	&.main-lp {
+		padding-top: 0;
+		background: linear-gradient(rgba($brown, 1), #fff);
+	}
+}
+@media #{$smartphone} {
+	.main {
+		padding: 30px 0;
+	}
+}

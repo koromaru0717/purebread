@@ -1,0 +1,30 @@
+.breadcrumb {
+	padding: 15px 0;
+
+	.breadcrumb_inner {
+		@include container;
+		line-height: 1;
+	}
+	span {
+		@include fs(12);
+	}
+
+	a {
+		text-decoration: none;
+		@include fs(12);
+		color: #666;
+	}
+
+	i {
+		margin: 0 5px;
+		color: rgba($brown, 0.8);
+	}
+
+	svg {
+		@include fs(12);
+		margin: 0 5px;
+	}
+}
+@media #{$smartphone} {
+	.breadcrumb {}
+}

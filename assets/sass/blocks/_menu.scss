@@ -1,0 +1,49 @@
+.menu {
+	width: 100%;
+	max-width: 300px;
+	a {
+		display: block;
+		text-decoration: none;
+		color: #333;
+		&:hover{
+			opacity: 0.7;
+		}
+	}
+	margin-bottom: 30px;
+	.menu_pic {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	.menu_title {
+		margin: 0;
+		padding: 15px 0 0;
+		font-size: 18px;
+	}
+	.menu_price {
+		margin: 0;
+		font-size: 14px;
+		color: $brown;
+	}
+	.menu_desc {
+		padding: 15px 0;
+		p {
+			margin: 0;
+			font-size: 13px;
+		}
+	}
+}
+.menu-border{
+	border:1px solid #eee;
+	padding: 15px;
+}
+
+@media #{$smartphone} {
+	.menu {
+		margin-bottom: 15px;
+		.menu_title {
+			font-size: 14px;
+		}
+	}
+}

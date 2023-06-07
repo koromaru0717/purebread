@@ -1,0 +1,9 @@
+.wp-block-categories{
+    a {
+        color: #0073aa;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}

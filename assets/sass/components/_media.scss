@@ -1,0 +1,19 @@
+.media {
+	.media_title {
+		@include fs(28);
+		margin: 15px 0;
+	}
+
+	.media_desc {
+		p {
+			@include fs(16);
+			padding: 15px 0;
+		}
+	}
+
+	.media_pic {
+		img {
+			@include max;
+		}
+	}
+}

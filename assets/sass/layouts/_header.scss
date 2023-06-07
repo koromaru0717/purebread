@@ -1,0 +1,216 @@
+.header {
+    .header_inner {
+        @include container;
+        @include flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 0 0;
+    }
+
+    .header_desc {
+        width: calc(50% - 100px);
+        order: 1;
+
+        p {
+            @include fs(14);
+            color: $brown;
+        }
+    }
+
+    .header_logo {
+        width: 200px;
+        order: 2;
+        text-align: center;
+
+        img {
+            width: 128px;
+            height: 128px;
+        }
+    }
+
+    .header_search {
+        width: calc(50% - 100px);
+        order: 3;
+        @include flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: relative;
+        @include cf;
+
+        input {
+            width: 270px;
+            padding: 10px;
+            @include radius;
+            @include fs(12);
+            border: 1px solid $brown;
+
+            &::placeholder {
+                color: rgba($brown, 0.3);
+            }
+        }
+
+        i,
+        svg {
+            position: absolute;
+            right: 10px;
+            color: $brown;
+        }
+    }
+
+    .header_sns {
+        @include flex;
+        justify-content: center;
+
+        li {
+            margin: 0 15px !important;
+            @include flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid $brown;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+
+            a {
+                color: $brown;
+            }
+
+            svg {
+                color: $brown;
+            }
+        }
+    }
+
+    .header_links {
+        background-color: #fff;
+        @include flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0;
+
+        .header_nav {}
+    }
+
+    .header_menu {
+        display: none;
+    }
+
+    &.is-close {
+        .header_links {
+            transform: translateY(-100%);
+        }
+    }
+
+    &.is-short {
+        .header_inner {
+            display: none;
+        }
+
+        .header_links {
+            transition: 0.5s;
+            transform: translateY(0);
+            z-index: 10000;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+    }
+}
+
+.header-sp {
+    display: none;
+}
+@media #{$smartphone} {
+    .header {
+        @include flex;
+        align-items: center;
+        position: fixed;
+        width: 100%;
+        background-color: $white;
+        z-index: 97;
+        padding: 10px 0;
+
+        .header_desc,
+        .header_search {
+            display: none;
+        }
+
+        .header_inner {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
+        .header_logo {
+            height: auto;
+            margin: 0 auto;
+            text-align: center;
+
+            img {
+                max-width: 50px;
+                height: auto;
+            }
+        }
+
+        .header_sns {
+            margin: 0 auto;
+        }
+
+        .header_links {
+            display: block;
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 99;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 70px;
+
+            ul {
+                li {
+                    white-space: nowrap;
+                }
+            }
+
+            &.is-active {
+                width: 100%;
+
+                .header_links_body {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .header_menu {
+            display: block;
+            position: fixed;
+            top: 28px;
+            left: 22px;
+            z-index: 100;
+            cursor: pointer;
+
+            .header_border {
+                transition: 200ms all ease;
+            }
+
+            &.is-active {
+                .header_border-1 {
+                    width: 38px;
+                    transform: translate(2px, 1px) rotate(45deg);
+                }
+
+                .header_border-2 {
+                    width: 0;
+                }
+
+                .header_border-3 {
+                    width: 38px;
+                    transform: translate(1px, 28px) rotate(-45deg);
+                }
+            }
+        }
+    }
+}

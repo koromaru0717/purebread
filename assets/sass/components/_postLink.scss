@@ -1,0 +1,45 @@
+.postLinks {
+	margin-top: 50px;
+	padding: 20px 0;
+	border-top: 1px solid $light-gray;
+	@include flex;
+}
+
+.postLink {
+	width: 50%;
+	padding: 15px 0;
+
+	a {
+		text-decoration: none;
+		@include fs(14);
+	}
+}
+
+.postLink-prev {
+	i,
+	svg {
+		margin-right: 10px;
+	}
+}
+
+.postLink-next {
+	text-align: right;
+
+	i,
+	svg {
+		margin-left: 10px;
+	}
+}
+@media #{$smartphone} {
+	.postLinks {
+		margin-top: 20px;
+	}
+
+	.postLink {
+		padding: 0;
+
+		a {
+			@include fs(12);
+		}
+	}
+}

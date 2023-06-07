@@ -1,0 +1,32 @@
+span.highlight{
+    font-weight: bold;
+    color: #f79531;
+}
+
+.clearfix,
+.cf {
+  @include clearfix;
+}
+
+a:hover img.hover,
+span:hover img.hover {
+  opacity: 0.8;
+}
+
+img.b,
+.b {
+  display: block;
+}
+
+img.auto {
+  display: block;
+  margin: 0 auto;
+}
+
+img.full {
+  @include full;
+}
+
+img.max {
+  @include max;
+}

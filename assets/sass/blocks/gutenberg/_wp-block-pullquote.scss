@@ -1,0 +1,18 @@
+.wp-block-pullquote{
+    border-top: 4px solid #555d66;
+    border-bottom: 4px solid #555d66;
+    color: #40464d;
+    blockquote {
+        .block-editor-rich-text {
+            p {
+                font-size: 28px;
+                line-height: 1.6;
+                font-family: 'Noto Serif JP';
+            }
+        }
+
+        cite{
+            color: #666;
+        }
+    }
+}

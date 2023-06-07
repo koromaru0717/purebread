@@ -1,0 +1,12 @@
+.wp-block-latest-comments {
+    a {
+        color: #0073aa;
+        transition-property: border,background,color;
+        transition-duration: .05s;
+        transition-timing-function: ease-in-out;
+        text-decoration: underline;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
