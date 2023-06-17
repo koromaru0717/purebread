@@ -9,10 +9,11 @@ html {
 「min-height」で最小の高さを画面の高さにあわせる
 */
 body {
-  color: #333;
+  color: #655046;
   font-size: 0.875rem;
   min-height: 100vh;
   position: relative;
+  letter-spacing: 3px;
 }
 a {
   color: #333;
@@ -101,7 +102,7 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: fixed;
+  position: relative;
   left: 0;
   right: 0;
   z-index: 10;
@@ -218,7 +219,90 @@ li {
   cursor: pointer;
 }
 
-
 /*-------------------------------------------
 ファーストビュー
 -------------------------------------------*/
+#first-view ,#about{
+  background-color: #fff;
+  /* width: 1400px; */
+  height: 800px;
+  margin-bottom: 30px;
+  background-size: cover; /* 背景画像を要素に完全にカバーする */
+  background-position: center; /* 背景画像を要素の中央に配置する */
+  background-repeat: no-repeat;/*画像が繰り返すのを防ぐ*/
+}
+
+#first-view {
+  background-image: url(/asset/img/top/top.png);
+  background-position: center; /* 背景画像を要素の中央に配置する */
+}
+
+
+/*-------------------------------------------
+アバウト
+-------------------------------------------*/
+#about {
+  background-image: url(/asset/img/top/aboutUs.png);
+}
+
+.aboutwrapper {
+  padding-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secTitle {
+  margin-bottom: 40px;
+}
+
+.secSubTitle {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.secText {
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: left;
+}
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 480px){
+.wrapper {
+  padding: 0 20px;
+}
+
+  #navi {
+    padding: 36px;
+  }
+  
+  #first-view .img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutwrapper {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  } 
+
+  .secSubTitle {
+    font-size: 24px;
+  }  
+
+  .secText {
+    font-size: 20px;
+    text-align: center;
+  }
+  
+}
