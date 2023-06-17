@@ -19,6 +19,7 @@ a {
   color: #333;
   text-decoration: none;
   transition: all 0.3s;
+  display: block;
 }
 a:hover {
   opacity: 0.5;
@@ -222,21 +223,21 @@ li {
 /*-------------------------------------------
 ファーストビュー
 -------------------------------------------*/
-#first-view ,#about{
+#first-view,
+#about {
   background-color: #fff;
   /* width: 1400px; */
   height: 800px;
   margin-bottom: 30px;
   background-size: cover; /* 背景画像を要素に完全にカバーする */
   background-position: center; /* 背景画像を要素の中央に配置する */
-  background-repeat: no-repeat;/*画像が繰り返すのを防ぐ*/
+  background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
 }
 
 #first-view {
   background-image: url(/asset/img/top/top.png);
   background-position: center; /* 背景画像を要素の中央に配置する */
 }
-
 
 /*-------------------------------------------
 アバウト
@@ -245,7 +246,8 @@ li {
   background-image: url(/asset/img/top/aboutUs.png);
 }
 
-.aboutwrapper {
+.aboutwrapper,
+.blogInfowrapper {
   padding-top: 80px;
   text-align: center;
   display: flex;
@@ -256,6 +258,7 @@ li {
 
 .secTitle {
   margin-bottom: 40px;
+  font-weight: bold;
 }
 
 .secSubTitle {
@@ -271,38 +274,122 @@ li {
 }
 
 /*-------------------------------------------
+ブログ
+-------------------------------------------*/
+#blogInfo {
+  margin-bottom: 30px;
+}
+
+.posts_block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  padding-bottom: 80px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_block {
+  max-width: 200px;
+  /* margin: 0 auto; */
+}
+
+.img_wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.post_cat {
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 90px;
+  height: 30px;
+  padding: 0 10px;
+  color: #668e68;
+  font-size: 11px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.textbox {
+  text-align: left;
+}
+
+.post_data {
+  margin-bottom: 10px;
+}
+
+.btn_area {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.btn {
+  display: inline-block;
+  width: 210px;
+  height: 50px;
+  background: #B98E51;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+  border-radius: 22.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+/*-------------------------------------------
 SP
 -------------------------------------------*/
-@media screen and (max-width: 480px){
-.wrapper {
-  padding: 0 20px;
-}
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0 20px;
+  }
 
   #navi {
     padding: 36px;
   }
-  
+
   #first-view .img img {
     width: 100%;
     height: auto;
   }
 
-  .aboutwrapper {
+  .aboutwrapper,
+  .blogInfowrapper {
     padding-top: 50px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-  } 
+  }
 
   .secSubTitle {
     font-size: 24px;
-  }  
+  }
 
   .secText {
     font-size: 20px;
     text-align: center;
   }
-  
 }
