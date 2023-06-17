@@ -369,11 +369,13 @@ li {
   background-color: #FAEBDD;
 }
 
-.menu_block {
+.menu_block,
+.access_block {
   display: flex;
 }
 
-.left-menu .right-menu{
+.left-menu ,
+.right-menu {
   width: 50%;
 }
 
@@ -389,9 +391,17 @@ justify-content: space-between;
 padding: 0px;
 }
 
+.accescc_texts {
+  text-align: left;
+}
 
+.accescc_texts li  {
+  padding-bottom: 32px;
+}
 
-
+.access_map {
+  max-width: 100%;
+}
 
 /*-------------------------------------------
 SP
@@ -438,11 +448,13 @@ SP
     text-align: center;
   }
 
-  .menu_block {
+  .menu_block ,
+  .access_block {
     display: block;
   }
   
-  .left-menu .right-menu{
+  .left-menu ,
+  .right-menu{
     width: 100%;
   }
   
