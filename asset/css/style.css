@@ -34,7 +34,7 @@ li {
 コンテンツ幅を設定するための共通クラス
 */
 .light_font {
-  color: #B98E51;
+  color: #b98e51;
   font-weight: normal;
 }
 
@@ -251,7 +251,7 @@ li {
 }
 
 .aboutwrapper,
-.blogInfowrapper, 
+.blogInfowrapper,
 .menuwrapper {
   padding-top: 80px;
   text-align: center;
@@ -339,7 +339,7 @@ li {
   display: inline-block;
   width: 210px;
   height: 50px;
-  background: #B98E51;
+  background: #b98e51;
   color: #fff;
   font-size: 18px;
   font-weight: bold;
@@ -371,7 +371,7 @@ li {
 メニュー
 -------------------------------------------*/
 #menu {
-  background-color: #FAEBDD;
+  background-color: #faebdd;
 }
 
 .menu_block,
@@ -379,7 +379,7 @@ li {
   display: flex;
 }
 
-.left-menu ,
+.left-menu,
 .right-menu {
   width: 50%;
 }
@@ -389,18 +389,18 @@ li {
 }
 
 .wrap_col2 {
-display: flex;
-flex-direction: row;
-align-items: center;
-justify-content: space-between;
-padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
 }
 
 .accescc_texts {
   text-align: left;
 }
 
-.accescc_texts li  {
+.accescc_texts li {
   padding-bottom: 32px;
 }
 
@@ -409,7 +409,7 @@ padding: 0;
 }
 
 #footer {
-  background-color: #D09359;
+  background-color: #d09359;
 }
 
 .footer_menu {
@@ -430,13 +430,12 @@ padding: 0;
 }
 
 .site_map_area li {
-  padding-right : 30px;
+  padding-right: 30px;
 }
 
 .site_map_area li:last-child {
-  padding-right : 0;
+  padding-right: 0;
 }
-
 
 .sns_area {
   display: flex;
@@ -467,11 +466,11 @@ padding: 0;
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/asset/img/menu/pageTitle.png');
+  background-image: url("/asset/img/menu/pageTitle.png");
   background-repeat: no-repeat;
-  background-position: center; 
+  background-position: center;
   background-size: cover;
-  background-color: #B98E51;
+  background-color: #b98e51;
   opacity: 0.3;
   z-index: -1;
 }
@@ -488,7 +487,7 @@ padding: 0;
 .seasonal,
 .side_dish,
 .sweet,
-.other{
+.other {
   text-align: center;
 }
 
@@ -536,7 +535,7 @@ SP
   .navi-title {
     font-size: 24px;
   }
-  
+
   .navi-sub-title {
     font-size: 16px;
   }
@@ -552,8 +551,8 @@ SP
 
   .aboutwrapper,
   .blogInfowrapper,
-  .menuwrapper ,
-  .accesswrapper{
+  .menuwrapper,
+  .accesswrapper {
     padding-top: 50px;
     text-align: center;
     display: flex;
@@ -571,39 +570,39 @@ SP
     text-align: center;
   }
 
-  .menu_block ,
+  .menu_block,
   .access_block {
     display: block;
   }
-  
-  .left-menu ,
-  .right-menu{
+
+  .left-menu,
+  .right-menu {
     width: 100%;
   }
 
-  .site_area{
+  .site_area {
     display: none;
-   }
+  }
 
-   .footer_menu {
+  .footer_menu {
     justify-content: center;
     padding: 20px 0;
-   }
+  }
 
-   .copyright {
+  .copyright {
     padding-bottom: 20px;
     font-size: 0.5rem;
-   }
+  }
 
-   .title-view {
+  .title-view {
     height: 30vh;
-   }
+  }
 
-   .page_text h1 {
+  .page_text h1 {
     font-size: 2rem;
   }
-  
+
   .page_text p {
     font-size: 1rem;
-  }  
+  }
 }
