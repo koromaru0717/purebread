@@ -33,6 +33,11 @@ li {
 /*
 コンテンツ幅を設定するための共通クラス
 */
+.light_font {
+  color: #B98E51;
+  font-weight: normal;
+}
+
 .wrapper {
   width: 100%;
   max-width: 1360px;
@@ -388,7 +393,7 @@ display: flex;
 flex-direction: row;
 align-items: center;
 justify-content: space-between;
-padding: 0px;
+padding: 0;
 }
 
 .accescc_texts {
@@ -444,6 +449,83 @@ padding: 0px;
 }
 
 /*-------------------------------------------
+メニューページ
+-------------------------------------------*/
+.title-view {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.title-view:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/asset/img/menu/pageTitle.png');
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  background-color: #B98E51;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.title-view,
+.seasonal,
+.side_dish,
+.sweet,
+.other {
+  margin-bottom: 80px;
+}
+
+.seasonal,
+.seasonal,
+.side_dish,
+.sweet,
+.other{
+  text-align: center;
+}
+
+.page_text {
+  width: 100%;
+}
+
+.page_text h1 {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.page_text p {
+  font-size: 1.5rem;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 30px 40px;
+}
+
+.menu_img_area {
+  padding: 10px;
+}
+
+.menu_img {
+  max-width: 280px;
+  max-height: 230px;
+}
+
+/*-------------------------------------------
 SP
 -------------------------------------------*/
 @media screen and (max-width: 480px) {
@@ -470,7 +552,8 @@ SP
 
   .aboutwrapper,
   .blogInfowrapper,
-  .menuwrapper {
+  .menuwrapper ,
+  .accesswrapper{
     padding-top: 50px;
     text-align: center;
     display: flex;
@@ -512,4 +595,15 @@ SP
     font-size: 0.5rem;
    }
 
+   .title-view {
+    height: 30vh;
+   }
+
+   .page_text h1 {
+    font-size: 2rem;
+  }
+  
+  .page_text p {
+    font-size: 1rem;
+  }  
 }
