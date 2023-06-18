@@ -403,6 +403,46 @@ padding: 0px;
   max-width: 100%;
 }
 
+#footer {
+  background-color: #D09359;
+}
+
+.footer_menu {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site_area {
+  text-align: left;
+}
+
+.site_map_area {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content: space-around;
+}
+
+.site_map_area li {
+  padding-right : 30px;
+}
+
+.site_map_area li:last-child {
+  padding-right : 0;
+}
+
+
+.sns_area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
 /*-------------------------------------------
 SP
 -------------------------------------------*/
@@ -457,5 +497,19 @@ SP
   .right-menu{
     width: 100%;
   }
-  
+
+  .site_area{
+    display: none;
+   }
+
+   .footer_menu {
+    justify-content: center;
+    padding: 20px 0;
+   }
+
+   .copyright {
+    padding-bottom: 20px;
+    font-size: 0.5rem;
+   }
+
 }
