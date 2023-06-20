@@ -1,28 +1,26 @@
-$(function(){
-  /*=================================================
-  ハンバーガーメニュー
-  ===================================================*/
-  // ハンバーガーメニューのクリックイベント
-  $('.toggle_btn').on('click', function() {
-    // #headerにopenクラスが存在する場合
-    if ($('#header').hasClass('open')) {
-      // openクラスを削除
-      // openクラスを削除すると、openクラスのCSSがはずれるため、
-      // メニューが非表示になる
-      $('#header').removeClass('open');
-
-    // #headerにopenクラスが存在しない場合
+$(function () {
+  $(".toggle_btn").on("click", function () {
+    if ($("#header").hasClass("open")) {
+      $("#navi").css("transform", "translateX(-100%)");
+      setTimeout(function () {
+        $("#navi").css("display", "none");
+      }, 500); // transitionの時間と同じにする
+      $("#header").removeClass("open");
     } else {
-      // openクラスを追加
-      // openクラスを追加すると、openクラスのCSSが適応されるため、
-      // メニューが表示される
-      $('#header').addClass('open');
+      $("#navi").css("display", "block");
+      // displayをblockにした後に、transformを変更する
+      setTimeout(function () {
+        $("#navi").css("transform", "translateX(0)");
+      }, 0);
+      $("#header").addClass("open");
     }
   });
 
-  // メニューが表示されている時に画面をクリックした場合
-  $('#mask').on('click', function() {
-    // openクラスを削除して、メニューを閉じる
-    $('#header').removeClass('open');
+  $("#mask").on("click", function () {
+    $("#navi").css("transform", "translateX(-100%)");
+    setTimeout(function () {
+      $("#navi").css("display", "none");
+    }, 500); // transitionの時間と同じにする
+    $("#header").removeClass("open");
   });
 });
