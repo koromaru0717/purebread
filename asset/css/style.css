@@ -3,6 +3,7 @@
 html {
   font-size: 100%;
 }
+
 /*
 フッターを画面下に配置するために、
 「position: relative;」を設定
@@ -15,21 +16,26 @@ body {
   position: relative;
   letter-spacing: 3px;
 }
+
 a {
   color: #333;
   text-decoration: none;
   transition: all 0.3s;
   display: block;
 }
+
 a:hover {
   opacity: 0.5;
 }
+
 img {
   max-width: 100%;
 }
+
 li {
   list-style: none;
 }
+
 /*
 コンテンツ幅を設定するための共通クラス
 */
@@ -44,15 +50,18 @@ li {
   margin: 0 auto;
   padding: 0 40px;
 }
+
 .content {
   padding-top: 120px;
   padding-bottom: 160px;
 }
+
 .site-title a {
   width: 180px;
   line-height: 1px;
   display: block;
 }
+
 .page-title {
   font-size: 0.875rem;
   font-weight: normal;
@@ -113,6 +122,7 @@ li {
   right: 0;
   z-index: 10;
 }
+
 /*
 ハンバーガーメニュー
 メニューが閉じている時は、「left: -300px;」で画面左に隠し、
@@ -121,20 +131,27 @@ li {
 #navi {
   position: fixed;
   top: 0;
-  left: -300px;
+  left: 0;
+  width: 90%;
+  height: 100%;
   color: #fff;
   padding: 36px 50px;
-  transition: all 0.5s;
+  transition: transform 0.5s;
   z-index: 20;
   opacity: 0;
+  display: none;
+  transform: translateX(-100%);
 }
+
 #navi a {
   color: #fff;
 }
+
 #navi li {
   width: 100%;
   margin-bottom: 32px;
 }
+
 /*
 ハンバーガーメニュー
 メニューが開いている時は、「left: 0;」「opacity: 1;」で
@@ -144,6 +161,7 @@ li {
   left: 0;
   opacity: 1;
 }
+
 .toggle_btn {
   width: 30px;
   height: 30px;
@@ -152,6 +170,7 @@ li {
   cursor: pointer;
   z-index: 20;
 }
+
 /*
 ハンバーガーメニューの線の設定（メニューが閉じている時）
 */
@@ -164,18 +183,21 @@ li {
   border-radius: 4px;
   transition: all 0.5s;
 }
+
 /*
 1本目の線の位置を設定
 */
 .toggle_btn span:nth-child(1) {
   top: 10px;
 }
+
 /*
 2本目の線の位置を設定
 */
 .toggle_btn span:nth-child(2) {
   bottom: 10px;
 }
+
 /*
 ハンバーガーメニューの線の設定（メニューが開いている時）
 線の色を白に変更
@@ -183,6 +205,7 @@ li {
 .open .toggle_btn span {
   background-color: #fff;
 }
+
 /*
 1本目の線を-45度回転
 */
@@ -190,6 +213,7 @@ li {
   -webkit-transform: translateY(4px) rotate(-45deg);
   transform: translateY(4px) rotate(-45deg);
 }
+
 /*
 2本目の線を45度回転
 */
@@ -197,6 +221,7 @@ li {
   -webkit-transform: translateY(-4px) rotate(45deg);
   transform: translateY(-4px) rotate(45deg);
 }
+
 /*
 ３本目の線を消す（違和感しかないので修正したい）
 */
@@ -208,6 +233,7 @@ li {
   display: none;
   transition: all 0.5s;
 }
+
 /*
 メニューを開いている時は、全体を緑背景にする
 */
@@ -233,14 +259,18 @@ li {
   /* width: 1400px; */
   height: 800px;
   margin-bottom: 30px;
-  background-size: cover; /* 背景画像を要素に完全にカバーする */
-  background-position: center; /* 背景画像を要素の中央に配置する */
-  background-repeat: no-repeat; /*画像が繰り返すのを防ぐ*/
+  background-size: cover;
+  /* 背景画像を要素に完全にカバーする */
+  background-position: center;
+  /* 背景画像を要素の中央に配置する */
+  background-repeat: no-repeat;
+  /*画像が繰り返すのを防ぐ*/
 }
 
 #first-view {
   background-image: url(/asset/img/top/top.png);
-  background-position: center; /* 背景画像を要素の中央に配置する */
+  background-position: center;
+  /* 背景画像を要素の中央に配置する */
 }
 
 /*-------------------------------------------
@@ -396,6 +426,9 @@ li {
   padding: 0;
 }
 
+#access {
+  margin-bottom: 30px;
+}
 .accescc_texts {
   text-align: left;
 }
@@ -524,6 +557,101 @@ li {
   max-height: 230px;
 }
 
+.latest_section ,
+.page_navigation {
+  margin-bottom: 60px;
+}
+
+.link_box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.box_img {
+  background-image: url('/asset/img/blogInfo/newblog.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+  /* max-width: 540px;
+  max-height: 350px; */
+  overflow: hidden;
+  /* width: 100%;
+  height: 100%; */
+}
+
+.new_icon {
+  background-image: url('/asset/img/blogInfo/newMark.png');
+  background-position: 50px;
+  padding: 70px 100px 0 0;
+  margin: 60px 0 45px 0;
+  font-size: 2rem;
+}
+
+.post_data,
+.post_title {
+  letter-spacing: 7px;
+}
+
+.post_data {
+  margin-bottom: 20px;
+  color: #A1928B;
+}
+
+.topics_area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.topics_area .post_box {
+  width: 300px;
+  margin: 40px 40px 0 0;
+}
+
+.topics_area .post_box .link_box {
+  display: block;
+}
+
+.topics_area .textbox {
+  padding-left: 0;
+}
+
+/*-------------------------------------------
+タブレット
+-------------------------------------------*/
+@media screen and (max-width: 960px) {
+  .post_box {
+    width: 100%;
+  }
+
+  .link_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .left-menu,
+  .right-menu {
+    width: 100%;
+  }
+
+
+  .textbox {
+    padding-left: 0px;
+  }
+
+  .new_icon {
+    margin-top: 0;
+  }
+
+  .menu_block,
+  .access_block {
+    display: block;
+  }
+}
+
+
 /*-------------------------------------------
 SP
 -------------------------------------------*/
@@ -605,4 +733,9 @@ SP
   .page_text p {
     font-size: 1rem;
   }
+
+  .topics_area .post_box {
+    width: 100%;
+  }
+
 }
