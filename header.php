@@ -14,7 +14,7 @@
   <?php wp_body_open(); ?>
   <header id="header" class="wrapper">
     <h1 class="site-title">
-      <a href="index.html"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread-logo"></a>
+    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread-logo"></a>
     </h1>
 
     <nav id="navi">
