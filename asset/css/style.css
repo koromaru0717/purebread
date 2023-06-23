@@ -267,7 +267,7 @@ li {
 }
 
 #first-view {
-  background-image: url(/asset/img/top/top.png);
+  background-image: url(/wp-content/themes/purebread/asset/img/top/top.png);
   background-position: center;
   /* 背景画像を要素の中央に配置する */
 }
@@ -276,7 +276,7 @@ li {
 アバウト
 -------------------------------------------*/
 #about {
-  background-image: url(/asset/img/top/aboutUs.png);
+  background-image: url(/wp-content/themes/purebread/asset/img/top/aboutUs.png);
 }
 
 .aboutwrapper,
@@ -325,7 +325,9 @@ li {
 }
 
 .post_block {
-  max-width: 200px;
+  width: 204px;
+  height: 324px;
+
   /* margin: 0 auto; */
 }
 
@@ -579,8 +581,7 @@ li {
 }
 
 .box_img {
-  max-width: 540px;
-  max-height: 350px;
+  max-height: 150px;
   overflow: hidden;
 }
 

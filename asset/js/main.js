@@ -1,4 +1,4 @@
-$(function () {
+jQuery(function ($) {
   $(".toggle_btn").on("click", function () {
     if ($("#header").hasClass("open")) {
       $("#navi").css("transform", "translateX(-100%)");
