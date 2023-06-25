@@ -14,15 +14,16 @@
   </section>
 
   <section class="topics_area">
-  <!-- その他の投稿を表示 -->
-  <?php if (have_posts()) : the_post(); /* 最新の投稿をスキップ */ endif; ?>
-  <?php while (have_posts()) : the_post(); ?>
-    <?php get_template_part('template-parts/loop', 'blog'); ?>
-  <?php endwhile; ?>
-</section>
+    <!-- その他の投稿を表示 -->
+    <?php if (have_posts()) : the_post(); /* 最新の投稿をスキップ */
+    endif; ?>
+    <?php while (have_posts()) : the_post(); ?>
+      <?php get_template_part('template-parts/loop', 'blog'); ?>
+    <?php endwhile; ?>
+  </section>
 
   <section class="page_navigation">
-    <!-- ページネーション --> 
+    <!-- ページネーション -->
     <?php the_posts_pagination(); ?>
   </section>
 </main>
