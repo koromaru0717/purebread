@@ -512,20 +512,17 @@ li {
 }
 
 .title-view,
-.seasonal,
-.side_dish,
-.sweet,
-.other {
+.menu_section {
   margin-bottom: 80px;
 }
 
-.seasonal,
-.seasonal,
-.side_dish,
-.sweet,
-.other {
+.menu_section {
   text-align: center;
 }
+
+/* .menu_list_title {
+  text-align: center;
+} */
 
 .page_text {
   width: 100%;
@@ -825,107 +822,108 @@ li {
   .sns_area {
     justify-content: center;
   }
+}
 
-  /*-------------------------------------------
+/*-------------------------------------------
 SP
 -------------------------------------------*/
-  @media screen and (max-width: 480px) {
-    .wrapper {
-      padding: 0 20px;
-    }
-
-    .navi-title {
-      font-size: 24px;
-    }
-
-    .navi-sub-title {
-      font-size: 16px;
-    }
-
-    #navi {
-      padding: 36px;
-    }
-
-    #first-view .img img {
-      width: 100%;
-      height: auto;
-    }
-
-    .aboutwrapper,
-    .blogInfowrapper,
-    .menuwrapper,
-    .accesswrapper {
-      padding-top: 50px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .secSubTitle {
-      font-size: 20px;
-    }
-
-    .secText {
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .menu_block,
-    .access_block {
-      display: block;
-    }
-
-    .left-menu,
-    .right-menu {
-      width: 100%;
-    }
-
-    .site_area {
-      display: none;
-    }
-
-    .footer_menu {
-      justify-content: center;
-      padding: 20px 0;
-    }
-
-    .copyright {
-      padding-bottom: 20px;
-      font-size: 0.5rem;
-    }
-
-    .title-view {
-      height: 30vh;
-    }
-
-    .page_text h1 {
-      font-size: 2rem;
-    }
-
-    .page_text p {
-      font-size: 1rem;
-    }
-
-    .topics_area .post_box {
-      width: 100%;
-    }
-
-    .main_content {
-      margin-right: 0;
-    }
-
-    .cat_list {
-      margin-bottom: 30px;
-    }
-
-    .sidebar {
-      display: none;
-    }
-
-    .post_content {
-      font-size: 14px;
-    }
-
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0 20px;
   }
+
+  .navi-title {
+    font-size: 24px;
+  }
+
+  .navi-sub-title {
+    font-size: 16px;
+  }
+
+  #navi {
+    padding: 36px;
+  }
+
+  #first-view .img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutwrapper,
+  .blogInfowrapper,
+  .menuwrapper,
+  .accesswrapper {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secSubTitle {
+    font-size: 20px;
+  }
+
+  .secText {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .menu_block,
+  .access_block {
+    display: block;
+  }
+
+  .left-menu,
+  .right-menu {
+    width: 100%;
+  }
+
+  .site_area {
+    display: none;
+  }
+
+  .footer_menu {
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .copyright {
+    padding-bottom: 20px;
+    font-size: 0.5rem;
+  }
+
+  .title-view {
+    height: 30vh;
+  }
+
+  .page_text h1 {
+    font-size: 2rem;
+  }
+
+  .page_text p {
+    font-size: 1rem;
+  }
+
+  .topics_area .post_box {
+    width: 100%;
+  }
+
+  .main_content {
+    margin-right: 0;
+  }
+
+  .cat_list {
+    margin-bottom: 30px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .post_content {
+    font-size: 14px;
+  }
+
+}

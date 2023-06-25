@@ -4,6 +4,7 @@
  * <title>タグを出力する
  */
 add_theme_support('title-tag');
+add_theme_support('post-thumbnails');
 
 function theme_scripts()
 {
