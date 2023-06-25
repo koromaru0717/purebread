@@ -63,3 +63,26 @@ function the_title_max_length($length)
   }
   echo $title;
 }
+
+/**
+ * ブログ投稿タイプにカテゴリーとタグを追加
+ * 
+ */
+function add_categories_and_tags_to_cpt() {
+  register_taxonomy_for_object_type('category', 'blogtop');
+  register_taxonomy_for_object_type('post_tag', 'blogtop');
+}
+add_action('init', 'add_categories_and_tags_to_cpt');
+
+/**
+ * ブログトップページは最新記事＋15件を取得する
+ * 
+ */
+function modify_main_query($query) {
+  if (!is_admin() && $query->is_main_query()) {
+    if (is_post_type_archive('blogtop')) {
+      $query->set('posts_per_page', 16);
+    }
+  }
+}
+add_action('pre_get_posts', 'modify_main_query');
