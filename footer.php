@@ -33,9 +33,9 @@
     <div class="site_area">
       <ul class="site_map_area">
         <li><a href="<?php echo home_url(); ?>">ＴＯＰ　ＰＡＧＥ</a></li>
-        <li><a href="/menu.html">ＭＥＮＵ</a></li>
-        <li><a href="/blogInfoTop.html">ＢＬＯＧ＆ＩＮＦＯ</a></li>
-        <li><a href="/index.html#access">ＡＣＣＥＳＳ</a></li>
+        <li><a href="<?php echo get_post_type_archive_link('menu'); ?>">ＭＥＮＵ</a></li>
+        <li><a href="<?php echo get_post_type_archive_link('blogtop'); ?>">ＢＬＯＧ＆ＩＮＦＯ</a></li>
+        <li><a href="<?php echo home_url(); ?>/#access">ＡＣＣＥＳＳ</a></li>
       </ul>
       <ul class="sns_area">
         <li class="sns-icons">
