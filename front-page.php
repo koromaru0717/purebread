@@ -67,7 +67,7 @@
     </div>
     <!-- ボタン -->
     <div class="btn_area">
-      <a href="/blogInfoTop.html" class="btn">more</a>
+      <a href="<?php echo get_post_type_archive_link('blogtop'); ?>" class="btn">more</a>
     </div>
   </div>
 </section>
