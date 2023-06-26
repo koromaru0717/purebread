@@ -520,10 +520,6 @@ li {
   text-align: center;
 }
 
-/* .menu_list_title {
-  text-align: center;
-} */
-
 .page_text {
   width: 100%;
 }
@@ -557,9 +553,21 @@ li {
   max-height: 230px;
 }
 
+/*-------------------------------------------
+ブログトップページ
+-------------------------------------------*/
+
 .latest_section,
 .page_navigation {
   margin-bottom: 60px;
+}
+
+.latest_section .img_wrap {
+  margin-right: 80px;
+}
+
+.latest_section .box_img {
+  max-height: 100%;
 }
 
 .page_navigation {
