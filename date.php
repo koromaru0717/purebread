@@ -19,33 +19,15 @@
 
   <section class="topics_area">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-        <div class="post_box">
-          <a href="<?php the_permalink(); ?>" class="link_box">
-            <div class="img_wrap">
-              <div class="box_img">
-                <?php if (has_post_thumbnail()) : ?>
-                  <?php the_post_thumbnail(); ?>
-                <?php else : ?>
-                  <img src="/wp-content/themes/purebread/asset/img/blogInfo/newblog.png">
-                <?php endif; ?>
-              </div>
-            </div>
-
-            <div class="textbox">
-              <div class="post_data"><?php the_time('Y.m.d'); ?></div>
-              <div class="post_title"><?php the_title_max_length(30);  ?></div>
-            </div>
-          </a>
-        </div>
+        <?php get_template_part('template-parts/loop', 'blog'); ?>
       <?php endwhile;
     else : ?>
       <p>記事がありません。</p>
     <?php endif; ?>
   </section>
 
-  <section class="page_navigation">
-    <?php the_posts_pagination(); ?>
-  </section>
+  <?php get_template_part('template-parts/pagination'); ?>
+
 </main>
 
 <?php get_footer(); ?>
