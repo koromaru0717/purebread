@@ -812,6 +812,15 @@ li {
   display: none;
 }
 
+.not_found {
+  text-align: center;
+}
+
+.not_found h1,
+.not_found .back_link {
+  margin-bottom: 60px;
+}
+
 /*-------------------------------------------
 タブレット
 -------------------------------------------*/
