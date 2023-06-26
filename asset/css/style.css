@@ -541,16 +541,21 @@ li {
 }
 
 .menu {
-  margin: 30px 40px 0 0;
+  margin: 20px 21px;
 }
 
+
 .menu_img_area {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .menu_img {
   max-width: 280px;
   max-height: 230px;
+}
+
+.menu_list_title {
+  font-size: 1.5rem;
 }
 
 /*-------------------------------------------
