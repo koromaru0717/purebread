@@ -31,7 +31,7 @@
         </div>
 
         <div class="back_link">
-          <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="back_btn"> <span>ブログ一覧に戻る</span></a>
+          <a href="<?php echo get_post_type_archive_link('blogtop'); ?>" class="back_btn"> <span>ブログ一覧に戻る</span></a>
         </div>
 
         <div class="single_navi_block">
