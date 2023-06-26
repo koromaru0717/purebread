@@ -14,7 +14,7 @@
   <?php wp_body_open(); ?>
   <header id="header" class="wrapper">
     <h1 class="site-title">
-    <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread-logo"></a>
+      <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread-logo"></a>
     </h1>
 
     <nav id="navi">
@@ -23,15 +23,15 @@
             <p class="navi-title">ＴＯＰ　ＰＡＧＥ</p>
             <p class="navi-sub-title">トップ</p>
           </a></li>
-        <li><a href="/menu.html">
+        <li><a href="<?php echo get_post_type_archive_link('menu'); ?>">
             <p class="navi-title">ＭＥＮＵ</p>
             <p class="navi-sub-title">メニュー</p>
           </a></li>
-        <li><a href="/blogInfoTop.html">
+        <li><a href="<?php echo get_post_type_archive_link('blogtop'); ?>">
             <p class="navi-title">ＢＬＯＧ＆ＩＮＦＯ</p>
             <p class="navi-sub-title">ブログ・お知らせ</p>
           </a></li>
-        <li><a href="/index.html#access">
+        <li><a href="<?php echo home_url(); ?>/#access">
             <p class="navi-title">ＡＣＣＥＳＳ</p>
             <p class="navi-sub-title">アクセス</p>
           </a></li>

@@ -1,6 +1,3 @@
-<!-- 
-category.phpとdate.phpと同様
- -->
 <?php get_header(); ?>
 
 <section class="title-view">
@@ -11,7 +8,6 @@ category.phpとdate.phpと同様
 </section>
 
 <main id="main" class="wrapper">
-
   <div class="tag_area">
     <h2 class="tag_title"><?php if (is_month()) : ?>
         <h2 class="main_title"><?php the_time('Y年m月'); ?></h2>

@@ -27,7 +27,9 @@
       <?php
       // WP_Queryのパラメータを設定
       $args = array(
-        'posts_per_page' => 3 // 最新の4つの投稿を取得
+        'post_type' => 'blogtop', 
+        // 最新の4つの投稿を取得
+        'posts_per_page' => 4 
       );
 
       // 新しいWP_Queryインスタンスを作成
@@ -67,7 +69,7 @@
     </div>
     <!-- ボタン -->
     <div class="btn_area">
-      <a href="/blogInfoTop.html" class="btn">more</a>
+      <a href="<?php echo get_post_type_archive_link('blogtop'); ?>" class="btn">more</a>
     </div>
   </div>
 </section>
@@ -136,7 +138,7 @@
     </div>
     <!-- ボタン -->
     <div class="btn_area">
-      <a href="/menu.html" class="btn">more</a>
+      <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn">more</a>
     </div>
   </div>
 </section>
