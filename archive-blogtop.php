@@ -24,10 +24,8 @@
     <?php endwhile; ?>
   </section>
 
-  <section class="page_navigation">
-    <!-- ページネーション -->
-    <?php the_posts_pagination(); ?>
-  </section>
+  <?php get_template_part('template-parts/pagination'); ?>
+
 </main>
 
 <?php get_footer(); ?>

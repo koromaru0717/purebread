@@ -562,6 +562,11 @@ li {
   margin-bottom: 60px;
 }
 
+.page_navigation {
+  text-align: center;
+  margin-top: 60px;
+}
+
 .latest_text_area {
   margin-left: 90px;
 }
@@ -767,6 +772,27 @@ li {
 
 .tag_title {
   font-size: 1.5rem;
+}
+
+.page_navigation .page_number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #F0EBEA;
+  color: #000;
+  margin-right: 5px;
+}
+
+.page_navigation .current .page_number {
+  background-color: #668E68;
+  color: #fff;
+}
+
+.page_navigation .prev.disabled,
+.page_navigation .next.disabled {
+  display: none;
 }
 
 /*-------------------------------------------

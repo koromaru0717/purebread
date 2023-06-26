@@ -26,9 +26,8 @@
     <?php endif; ?>
   </section>
 
-  <section class="page_navigation">
-    <?php the_posts_pagination(); ?>
-  </section>
+  <?php get_template_part('template-parts/pagination'); ?>
+
 </main>
 
 <?php get_footer(); ?>
