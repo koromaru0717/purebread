@@ -84,7 +84,7 @@
       <div class="left-menu">
         <div class="box-wrap">
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuL.png">
               </div>
@@ -93,14 +93,14 @@
         </div>
         <div class="wrap_col2">
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
             </a>
           </div>
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
@@ -111,14 +111,14 @@
       <div class="right-menu">
         <div class="wrap_col2">
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
             </a>
           </div>
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
@@ -127,7 +127,7 @@
         </div>
         <div class="box-wrap">
           <div class="box">
-            <a href="./menu.html">
+            <a href="<?php echo get_post_type_archive_link('menu'); ?>">
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuL.png">
               </div>
