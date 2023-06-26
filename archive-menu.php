@@ -11,15 +11,15 @@
 
   <?php
   // カスタム投稿タイプのタクソノミーを指定
-  $taxonomy = 'menu2';
+  $taxonomy = 'menu_terms';
 
-  // タクソノミーのターム（カテゴリー）を取得
-  $terms = get_terms($taxonomy);
+  // タームの順序を定義
+  $term_order = array('seasonal', 'side-dish-bread', 'sweet-bread', 'others');
 
-  // 各ターム（カテゴリー）ごとにループ
-  foreach ($terms as $term) :
-    // タームのスラッグを取得
-    $term_slug = $term->slug;
+  // タームの順序に従ってループ
+  foreach ($term_order as $term_slug) :
+    // タームを取得
+    $term = get_term_by('slug', $term_slug, $taxonomy);
 
     // タームに属する投稿を取得
     $args = array(
@@ -40,7 +40,14 @@
 
       <div class="menus">
         <?php while ($query->have_posts()) : $query->the_post(); ?>
-          <?php get_template_part('template-parts/loop', 'menu'); ?>
+          <div class="menu">
+            <div class="menu_img_area">
+              <?php the_post_thumbnail('full', array('class' => 'menu_img')); ?>
+            </div>
+            <div class="menu_text">
+              <p><?php the_title(); ?></p>
+            </div>
+          </div>
         <?php endwhile; ?>
       </div>
 
