@@ -37,12 +37,24 @@
         <div class="single_navi_block">
           <div class="left_box">
             <span class="next">
-              <?php previous_post_link('%link', '<i class="fas fa-arrow-left"></i> %title'); ?>
+              <?php
+              $next_post = get_next_post();
+              if (!empty($next_post)) :
+                $next_title = the_nav_title_max_length(30, $next_post->post_title);
+                echo '<a href="' . get_permalink($next_post->ID) . '"><i class="fas fa-arrow-left"></i> ' . $next_title . '</a>';
+              endif;
+              ?>
             </span>
           </div>
           <div class="right_box">
             <span class="prev">
-              <?php next_post_link('%link', '%title <i class="fas fa-arrow-right"></i>'); ?>
+              <?php
+              $prev_post = get_previous_post();
+              if (!empty($prev_post)) :
+                $prev_title = the_nav_title_max_length(30, $prev_post->post_title);
+                echo '<a href="' . get_permalink($prev_post->ID) . '">' . $prev_title . ' <i class="fas fa-arrow-right"></i></a>';
+              endif;
+              ?>
             </span>
           </div>
         </div>
