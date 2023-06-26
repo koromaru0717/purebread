@@ -136,7 +136,7 @@
     </div>
     <!-- ボタン -->
     <div class="btn_area">
-      <a href="/menu.html" class="btn">more</a>
+    <a href="<?php echo get_post_type_archive_link('menu'); ?>" class="btn">more</a>
     </div>
   </div>
 </section>
