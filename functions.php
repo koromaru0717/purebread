@@ -61,6 +61,20 @@ function the_title_max_length($length)
   echo $title;
 }
 
+
+function the_nav_title_max_length($length, $title = null)
+{
+  if ($title === null) {
+    $title = get_the_title();
+  }
+  if (mb_strlen($title) > $length) {
+    $title = mb_substr($title, 0, $length);
+    $title = $title . '...';
+  }
+  return $title;
+}
+
+
 /**
  * ブログ投稿タイプにカテゴリーとタグを追加
  * 
