@@ -27,7 +27,7 @@
 
 <footer id="footer">
   <div class="wrapper footer_menu">
-    <h1 class="site-title footer_logo">
+    <h1 class="site-title footer-logo">
       <a href="<?php echo home_url(); ?>"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread-logo"></a>
     </h1>
     <div class="site_area">
