@@ -608,6 +608,10 @@ li {
   letter-spacing: 7px;
 }
 
+.post_title {
+  word-wrap: break-word;
+}
+
 .post_data {
   margin-bottom: 20px;
   color: #A1928B;
