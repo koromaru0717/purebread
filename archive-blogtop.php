@@ -8,10 +8,12 @@
 </section>
 
 <main id="main" class="wrapper">
-  <section class="latest_section">
-    <!-- 最新の投稿を表示 -->
-    <?php get_template_part('template-parts/loop', 'blog'); ?>
-  </section>
+  <?php if (get_query_var('paged') <= 1) : ?>
+    <section class="latest_section">
+      <!-- 最新の投稿を表示 -->
+      <?php get_template_part('template-parts/loop', 'blog'); ?>
+    </section>
+  <?php endif; ?>
 
   <section class="topics_area">
     <!-- その他の投稿を表示 -->
