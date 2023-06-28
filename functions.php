@@ -126,3 +126,12 @@ function include_blogtop_in_category($query)
   return $query;
 }
 add_filter('pre_get_posts', 'include_blogtop_in_category');
+
+
+function aioseo_disable_term_title_rewrites( $disabled ) {
+  if ( !is_home()) { //ホーム以外
+		return true;
+	}
+	return false;
+}
+add_filter( 'aioseo_disable_title_rewrites', 'aioseo_disable_term_title_rewrites' );
