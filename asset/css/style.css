@@ -267,7 +267,7 @@ li {
 }
 
 #first-view {
-  background-image: url(/asset/img/top/top.png);
+  background-image: url(/wp-content/themes/purebread/asset/img/top/top.png);
   background-position: center;
   /* 背景画像を要素の中央に配置する */
 }
@@ -276,7 +276,7 @@ li {
 アバウト
 -------------------------------------------*/
 #about {
-  background-image: url(/asset/img/top/aboutUs.png);
+  background-image: url(/wp-content/themes/purebread/asset/img/top/aboutUs.png);
 }
 
 .aboutwrapper,
@@ -325,7 +325,9 @@ li {
 }
 
 .post_block {
-  max-width: 200px;
+  width: 204px;
+  height: 324px;
+
   /* margin: 0 auto; */
 }
 
@@ -500,7 +502,7 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("/asset/img/menu/pageTitle.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/menu/pageTitle.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -510,18 +512,11 @@ li {
 }
 
 .title-view,
-.seasonal,
-.side_dish,
-.sweet,
-.other {
+.menu_section {
   margin-bottom: 80px;
 }
 
-.seasonal,
-.seasonal,
-.side_dish,
-.sweet,
-.other {
+.menu_section {
   text-align: center;
 }
 
@@ -546,11 +541,12 @@ li {
 }
 
 .menu {
-  margin: 30px 40px 0 0;
+  margin: 20px 21px;
 }
 
+
 .menu_img_area {
-  padding: 10px;
+  padding-bottom: 10px;
 }
 
 .menu_img {
@@ -558,9 +554,30 @@ li {
   max-height: 230px;
 }
 
+.menu_list_title {
+  font-size: 1.5rem;
+}
+
+/*-------------------------------------------
+ブログトップページ
+-------------------------------------------*/
+
 .latest_section,
 .page_navigation {
   margin-bottom: 60px;
+}
+
+.latest_section .img_wrap {
+  margin-right: 80px;
+}
+
+.latest_section .box_img {
+  max-height: 100%;
+}
+
+.page_navigation {
+  text-align: center;
+  margin-top: 60px;
 }
 
 .latest_text_area {
@@ -579,13 +596,12 @@ li {
 }
 
 .box_img {
-  max-width: 540px;
-  max-height: 350px;
+  max-height: 195px;
   overflow: hidden;
 }
 
 .new_icon {
-  background-image: url('/asset/img/blogInfo/newMark.png');
+  background-image: url('/wp-content/themes/purebread/asset/img/blogInfo/newMark.png');
   background-position: 50px;
   padding: 70px 100px 0 0;
   margin: 60px 0 45px 0;
@@ -595,6 +611,10 @@ li {
 .post_data,
 .post_title {
   letter-spacing: 7px;
+}
+
+.post_title {
+  word-wrap: break-word;
 }
 
 .post_data {
@@ -679,7 +699,7 @@ li {
 }
 
 .back_btn span {
-  background: url(/asset/img/blogDtl/back.png) left center no-repeat;
+  background: url(/wp-content/themes/purebread/asset/img/blogDtl/back.png) left center no-repeat;
   background-size: 20px auto;
   padding: 0 0 0 38px;
   color: #ffffff;
@@ -723,7 +743,7 @@ li {
 }
 
 .block_title {
-  background: url(/asset/img/blogDtl/title.png) center top no-repeat;
+  background: url(/wp-content/themes/purebread/asset/img/blogDtl/title.png) center top no-repeat;
   background-size: 60px auto;
   border-bottom: 1px solid #b98e51;
   padding: 34px 0 12px;
@@ -771,6 +791,36 @@ li {
   font-size: 1.5rem;
 }
 
+.page_navigation .page_number {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  background-color: #F0EBEA;
+  color: #000;
+  margin-right: 5px;
+}
+
+.page_navigation .current .page_number {
+  background-color: #668E68;
+  color: #fff;
+}
+
+.page_navigation .prev.disabled,
+.page_navigation .next.disabled {
+  display: none;
+}
+
+.not_found {
+  text-align: center;
+}
+
+.not_found h1,
+.not_found .back_link {
+  margin-bottom: 60px;
+}
+
 /*-------------------------------------------
 タブレット
 -------------------------------------------*/
@@ -812,6 +862,10 @@ li {
     display: block;
   }
 
+  .article_title {
+    font-size: 1.5rem;
+  }
+
   .main_content {
     flex: 2.5;
     margin-right: 30px;
@@ -820,107 +874,108 @@ li {
   .sns_area {
     justify-content: center;
   }
+}
 
-  /*-------------------------------------------
+/*-------------------------------------------
 SP
 -------------------------------------------*/
-  @media screen and (max-width: 480px) {
-    .wrapper {
-      padding: 0 20px;
-    }
-
-    .navi-title {
-      font-size: 24px;
-    }
-
-    .navi-sub-title {
-      font-size: 16px;
-    }
-
-    #navi {
-      padding: 36px;
-    }
-
-    #first-view .img img {
-      width: 100%;
-      height: auto;
-    }
-
-    .aboutwrapper,
-    .blogInfowrapper,
-    .menuwrapper,
-    .accesswrapper {
-      padding-top: 50px;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .secSubTitle {
-      font-size: 20px;
-    }
-
-    .secText {
-      font-size: 16px;
-      text-align: center;
-    }
-
-    .menu_block,
-    .access_block {
-      display: block;
-    }
-
-    .left-menu,
-    .right-menu {
-      width: 100%;
-    }
-
-    .site_area {
-      display: none;
-    }
-
-    .footer_menu {
-      justify-content: center;
-      padding: 20px 0;
-    }
-
-    .copyright {
-      padding-bottom: 20px;
-      font-size: 0.5rem;
-    }
-
-    .title-view {
-      height: 30vh;
-    }
-
-    .page_text h1 {
-      font-size: 2rem;
-    }
-
-    .page_text p {
-      font-size: 1rem;
-    }
-
-    .topics_area .post_box {
-      width: 100%;
-    }
-
-    .main_content {
-      margin-right: 0;
-    }
-
-    .cat_list {
-      margin-bottom: 30px;
-    }
-
-    .sidebar {
-      display: none;
-    }
-
-    .post_content {
-      font-size: 14px;
-    }
-
+@media screen and (max-width: 480px) {
+  .wrapper {
+    padding: 0 20px;
   }
+
+  .navi-title {
+    font-size: 24px;
+  }
+
+  .navi-sub-title {
+    font-size: 16px;
+  }
+
+  #navi {
+    padding: 36px;
+  }
+
+  #first-view .img img {
+    width: 100%;
+    height: auto;
+  }
+
+  .aboutwrapper,
+  .blogInfowrapper,
+  .menuwrapper,
+  .accesswrapper {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .secSubTitle {
+    font-size: 20px;
+  }
+
+  .secText {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .menu_block,
+  .access_block {
+    display: block;
+  }
+
+  .left-menu,
+  .right-menu {
+    width: 100%;
+  }
+
+  .site_area {
+    display: none;
+  }
+
+  .footer_menu {
+    justify-content: center;
+    padding: 20px 0;
+  }
+
+  .copyright {
+    padding-bottom: 20px;
+    font-size: 0.5rem;
+  }
+
+  .title-view {
+    height: 30vh;
+  }
+
+  .page_text h1 {
+    font-size: 2rem;
+  }
+
+  .page_text p {
+    font-size: 1rem;
+  }
+
+  .topics_area .post_box {
+    width: 100%;
+  }
+
+  .main_content {
+    margin-right: 0;
+  }
+
+  .cat_list {
+    margin-bottom: 30px;
+  }
+
+  .sidebar {
+    display: none;
+  }
+
+  .post_content {
+    font-size: 14px;
+  }
+
+}
