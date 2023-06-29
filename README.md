@@ -1,55 +1,32 @@
 # purebread
 
-## WordPressテーマ開発手順
+## 概要
+Wordpressを活用したパン屋のWebサイト<br>
+※仮想案件です
+<br> 
+<br> 
 
-以下は、WordPressのテーマ開発の基本的な手順です。
+## コンセプト
+こちらに詳細を記載しています<br>
+https://github.com/koromaru0717/purebread/tree/main/concept
 <br>
-<br>
+<br> 
 
-### 1. デザインカンプの確認:
-   - デザインカンプを詳細に確認し、必要なページのレイアウト、色、フォント、画像、アニメーションなどを理解します。
+## デザイン
+Figmaにて作成しました。　こちらに格納しています<br>
+PC版<br>
+https://github.com/koromaru0717/purebread/tree/main/design/PC.png
 <br>
+SP版<br>
+https://github.com/koromaru0717/purebread/tree/main/design/SP.png
 <br>
-### 2. HTML/CSS/JavaScriptのコーディング:
-   - デザインカンプに基づいて、HTML、CSS、JavaScriptを使用して静的なウェブページを作成します。
-<br>
-<br>
+<br> 
 
-### 3. WordPress環境の設定:
-   - ローカルまたはリモートのサーバーにWordPressをインストールし、必要な設定を行います。
-<br>
-<br>
+## 環境
+利用したレンタルサーバー：Conoha Wing<br>
+ドメイン取得：お名前.com<br>
+<br> 
 
-### 4. テーマの作成または選択:
-   - 新しいテーマを作成するか、既存のテーマを選択して子テーマを作成します。
-<br>
-<br>
-
-### 5. テンプレートファイルの作成:
-   - WordPressのテンプレート階層を理解し、必要なテンプレートファイルを作成します。
-<br>
-<br>
-
-### 6. HTMLをテンプレートタグに置き換える:
-   - 静的なHTMLをWordPressのテンプレートタグに置き換えます。
-<br>
-<br>
-
-### 7. 必要な機能の追加:
-   - カスタム投稿タイプ、カスタムフィールド、ウィジェット、ショートコードなどの機能を追加します。
-<br>
-<br>
-
-### 8. テーマのテスト:
-   - テーマの動作をテストし、表示が正しいことを確認します。
-<br>
-<br>
-
-### 9. テーマのインストールとアクティベーション:
-   - WordPressの管理画面からテーマをインストールし、アクティベートします。
-<br>
-<br>
-
-### 10. コンテンツの追加と調整:
-   - 必要なコンテンツを追加し、デザインやレイアウトが正しく表示されることを確認します。
-
+## お問い合わせ
+下記TwitterのDMへお問い合わせください。<br>
+https://twitter.com/kou017_
