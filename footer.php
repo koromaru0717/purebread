@@ -51,7 +51,7 @@
     </div>
   </div>
   <div class="copyright">
-    <p>Copyright(C) purebread</p>
+    <p>Copyright(C) purebread ※このWebサイトは仮想のサイトです</p>
   </div>
 </footer>
 <?php wp_footer(); ?>
