@@ -1,3 +1,28 @@
+@use "../common/variables" as va;
+
+#access {
+  margin-bottom: 30px;
+
+  .accescc_texts {
+    text-align: left;
+
+    li {
+      padding-bottom: 32px;
+    }
+  }
+
+  .access_map {
+    max-width: 100%;
+  }
+
+  @include va.mq(va.$bp-medium) {
+    .link_box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
 #footer {
   background-color: #d09359;
 }

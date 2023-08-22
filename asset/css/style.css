@@ -40,9 +40,9 @@ li {
 
 .wrapper {
   width: 100%;
-  max-width: 1360px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 10px;
 }
 
 .content {
@@ -67,6 +67,9 @@ li {
 -------------------------------------------*/
 /*-------------------------------------------
 SP
+-------------------------------------------*/
+/*-------------------------------------------
+ヘッダー
 -------------------------------------------*/
 #header {
   height: 100px;
@@ -157,27 +160,24 @@ SP
   color: #fff;
   font-weight: bold;
 }
-#navi .btn {
-  width: 250px;
-  border: solid 1px #fff;
-  color: #fff;
-  display: block;
-  font-weight: bold;
-  margin: 0 auto;
-  position: relative;
-  transition: 0.3s ease-in-out;
+
+#access {
+  margin-bottom: 30px;
 }
-#navi .btn::after {
-  content: "　";
-  width: 250px;
-  padding: 15px 0;
-  position: absolute;
-  right: -6px;
-  bottom: -6px;
+#access .accescc_texts {
+  text-align: left;
 }
-#navi .btn:hover {
-  background-color: #fff;
-  color: #6f926f;
+#access .accescc_texts li {
+  padding-bottom: 32px;
+}
+#access .access_map {
+  max-width: 100%;
+}
+@media (max-width: 840px) {
+  #access .link_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 #footer {
@@ -239,123 +239,6 @@ SP
   flex-grow: 0;
 }
 
-/*-------------------------------------------
-ファーストビュー
--------------------------------------------*/
-#first-view,
-#about {
-  background-color: #fff;
-  /* width: 1400px; */
-  height: 800px;
-  margin-bottom: 30px;
-  background-size: cover;
-  /* 背景画像を要素に完全にカバーする */
-  background-position: center;
-  /* 背景画像を要素の中央に配置する */
-  background-repeat: no-repeat;
-  /*画像が繰り返すのを防ぐ*/
-}
-
-#first-view {
-  background-image: url(/asset/img/top/top.png);
-  background-position: center;
-  /* 背景画像を要素の中央に配置する */
-}
-
-/*-------------------------------------------
-アバウト
--------------------------------------------*/
-#about {
-  background-image: url(/asset/img/top/aboutUs.png);
-}
-
-.aboutwrapper,
-.blogInfowrapper,
-.menuwrapper {
-  padding-top: 80px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.secTitle {
-  margin-bottom: 40px;
-  font-weight: bold;
-}
-
-.secSubTitle {
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.secText {
-  max-width: 800px;
-  font-size: 24px;
-  line-height: 60px;
-  text-align: left;
-}
-
-/*-------------------------------------------
-ブログ
--------------------------------------------*/
-#blogInfo {
-  margin-bottom: 30px;
-}
-
-.posts_block {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  padding: 0px;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.post_block {
-  width: 204px;
-  height: 324px;
-  /* margin: 0 auto; */
-}
-
-.img_wrap {
-  position: relative;
-  margin-bottom: 20px;
-}
-
-.post_cat {
-  background-color: rgba(255, 255, 255, 0.9);
-  min-width: 90px;
-  height: 30px;
-  padding: 0 10px;
-  color: #668e68;
-  font-size: 11px;
-  font-size: 1.1rem;
-  text-align: center;
-  font-weight: bold;
-  line-height: 30px;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-
-.textbox {
-  text-align: left;
-}
-
-.post_data {
-  margin-bottom: 10px;
-  font-size: 12px;
-}
-
-.btn_area {
-  align-items: center;
-  justify-content: center;
-  padding-bottom: 60px;
-}
-
 .btn {
   display: inline-block;
   width: 210px;
@@ -373,19 +256,220 @@ SP
   transition: transform 0.2s;
   border-radius: 22.5px;
 }
-
-.btn:hover {
+.btn :hover {
   transform: translateY(-2px);
 }
-
-.btn:active {
+.btn :active {
   transform: translateY(2px);
+}
+
+/*-------------------------------------------
+ファーストビューとアバウト
+-------------------------------------------*/
+#first-view {
+  background-color: #fff;
+  height: 60vh;
+  margin-bottom: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url("/asset/img/top/top.png");
+}
+@media (max-width: 540px) {
+  #first-view {
+    height: 90vh;
+  }
+}
+
+#about {
+  background-color: #fff;
+  height: 60vh;
+  margin-bottom: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/asset/img/top/aboutUs.png");
+}
+@media (max-width: 540px) {
+  #about {
+    height: 80vh;
+  }
+}
+@media (max-width: 375px) {
+  #about {
+    height: 90vh;
+  }
+}
+
+.aboutwrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.secTitle {
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+}
+@media (max-width: 1140px) {
+  .secTitle {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 840px) {
+  .secTitle {
+    font-size: 1.75rem;
+  }
+}
+@media (max-width: 540px) {
+  .secTitle {
+    font-size: 1.5rem;
+  }
+}
+
+.secSubTitle {
+  font-size: 1.75rem;
+  margin: 40px 0;
+}
+@media (max-width: 840px) {
+  .secSubTitle {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 540px) {
+  .secSubTitle {
+    font-size: 1.25rem;
+  }
+}
+
+.secText {
+  max-width: 800px;
+  font-size: 1.25rem;
+  line-height: 60px;
+  text-align: left;
+}
+@media (max-width: 840px) {
+  .secText {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 540px) {
+  .secText {
+    font-size: 0.9rem;
+  }
+}
+
+.text-alia {
+  margin-bottom: 30px;
+}
+@media (max-width: 840px) {
+  .text-alia {
+    padding: 0 30px;
+  }
+}
+@media (max-width: 540px) {
+  .text-alia {
+    padding: 0 10px;
+  }
+}
+
+.test {
+  align-items: center;
+}
+
+/*-------------------------------------------
+ブログ
+-------------------------------------------*/
+#blogInfo {
+  margin-bottom: 30px;
+}
+
+.blogInfowrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+.blogInfowrapper .secTitle {
+  padding-bottom: 40px;
+}
+@media (max-width: 840px) {
+  .blogInfowrapper {
+    padding-bottom: 30px;
+  }
+}
+
+.posts_block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.posts_block .post_block {
+  width: 210px;
+}
+@media (max-width: 950px) {
+  .posts_block .post_block {
+    width: 45%;
+  }
+}
+@media (max-width: 540px) {
+  .posts_block .post_block {
+    width: 80%;
+  }
+}
+.posts_block .post_block .img_wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+.posts_block .post_block .img_wrap .post_cat {
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 90px;
+  height: 30px;
+  padding: 0 10px;
+  color: #668e68;
+  font-size: 11px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.posts_block .post_block .textbox {
+  text-align: left;
+}
+.posts_block .post_block .textbox .post_data {
+  margin-bottom: 10px;
+  font-size: 12px;
 }
 
 /* ボタン下調整 */
 .posts_block,
 .menu_block {
   padding-bottom: 80px;
+}
+@media (max-width: 840px) {
+  .posts_block,
+.menu_block {
+    padding-bottom: 30px;
+  }
 }
 
 /*-------------------------------------------
@@ -395,21 +479,44 @@ SP
   background-color: #faebdd;
 }
 
+.menuwrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 .menu_block,
 .access_block {
   display: flex;
 }
-
-.left-menu,
-.right-menu {
+@media (max-width: 540px) {
+  .menu_block,
+.access_block {
+    display: block;
+  }
+}
+.menu_block .left-menu,
+.menu_block .right-menu,
+.access_block .left-menu,
+.access_block .right-menu {
   width: 50%;
 }
-
-.box {
+@media (max-width: 540px) {
+  .menu_block .left-menu,
+.menu_block .right-menu,
+.access_block .left-menu,
+.access_block .right-menu {
+    width: 100%;
+  }
+}
+.menu_block .box,
+.access_block .box {
   padding: 20px;
 }
-
-.wrap_col2 {
+.menu_block .wrap_col2,
+.access_block .wrap_col2 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -417,28 +524,6 @@ SP
   padding: 0;
 }
 
-#access {
-  margin-bottom: 30px;
-}
-
-.accescc_texts {
-  text-align: left;
-}
-
-.accescc_texts li {
-  padding-bottom: 32px;
-}
-
-.access_map {
-  max-width: 100%;
-}
-
-@media (max-width: 840px) {
-  .link_box {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
 /*-------------------------------------------
 メニューページ
 -------------------------------------------*/

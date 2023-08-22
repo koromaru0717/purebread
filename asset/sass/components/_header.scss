@@ -109,28 +109,28 @@
     }
   }
 
-  .btn {
-    width: 250px;
-    border: solid 1px #fff;
-    color: #fff;
-    display: block;
-    font-weight: bold;
-    margin: 0 auto;
-    position: relative;
-    transition: 0.3s ease-in-out;
+  // .btn {
+  //   width: 250px;
+  //   border: solid 1px #fff;
+  //   color: #fff;
+  //   display: block;
+  //   font-weight: bold;
+  //   margin: 0 auto;
+  //   position: relative;
+  //   transition: 0.3s ease-in-out;
 
-    &::after {
-      content: "　";
-      width: 250px;
-      padding: 15px 0;
-      position: absolute;
-      right: -6px;
-      bottom: -6px;
-    }
+  //   &::after {
+  //     content: "　";
+  //     width: 250px;
+  //     padding: 15px 0;
+  //     position: absolute;
+  //     right: -6px;
+  //     bottom: -6px;
+  //   }
 
-    &:hover {
-      background-color: #fff;
-      color: #6f926f;
-    }
-  }
+  //   &:hover {
+  //     background-color: #fff;
+  //     color: #6f926f;
+  //   }
+  // }
 }
