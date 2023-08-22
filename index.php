@@ -1,5 +1,5 @@
 <!-- 
-category.phpとdate.phpと同様
+category.phpとdate.phpと同様　
  -->
 <?php get_header(); ?>
 
