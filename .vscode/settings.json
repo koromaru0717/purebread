@@ -1,0 +1,7 @@
+{
+  // liveServer
+  "liveServer.settings.port": 5501 ,
+  // DartJS Sass
+  "dartsass.targetDirectory": "asset/css", //どのフォルダに出力するか
+  "dartsass.outputFormat": "cssonly",
+}

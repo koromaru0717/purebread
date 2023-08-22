@@ -1,0 +1,221 @@
+@use "./variables" as va;
+
+html {
+  font-size: 100%;
+}
+
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+  color: va.$base-font-color;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+  letter-spacing: 3px;
+  font-family:'Roboto','Hiragino Sans','Meiryo','Hiragino Kaku Gothic ProN',sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.light_font {
+  color: va.$light-font-color;
+  font-weight: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.site-title a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+
+.page-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/*-------------------------------------------
+タブレット
+-------------------------------------------*/
+// @include va.mq(va.$bp-medium){
+  // .post_box {
+  //   width: 100%;
+  // }
+
+  // .left-menu,
+  // .right-menu {
+  //   width: 100%;
+  // }
+
+  // .footer_menu {
+  //   padding-top: 30px;
+  //   flex-direction: column;
+  //   align-items: center;
+  // }
+
+  // .footer-logo {
+  //   margin-bottom: 30px;
+  // }
+
+  // .textbox {
+  //   padding-left: 0px;
+  // }
+
+  // .new_icon {
+  //   margin-top: 0;
+  // }
+
+  // .menu_block,
+  // .access_block {
+  //   display: block;
+  // }
+
+  // .article_title {
+  //   font-size: 1.5rem;
+  // }
+
+  // .main_content {
+  //   flex: 2.5;
+  //   margin-right: 30px;
+  // }
+
+  // .sns_area {
+  //   justify-content: center;
+  // }
+// }
+
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+// @include va.mq(va.$bp-small){
+  // body {
+  //   color: #cafa6a ;
+  // }
+
+  // .wrapper {
+  //   padding: 0 20px;
+  // }
+
+  // .navi-title {
+  //   font-size: 24px;
+  // }
+
+  // .navi-sub-title {
+  //   font-size: 16px;
+  // }
+
+  // #navi {
+  //   padding: 36px;
+  // }
+
+  // #first-view .img img {
+  //   width: 100%;
+  //   height: auto;
+  // }
+
+  // .aboutwrapper,
+  // .blogInfowrapper,
+  // .menuwrapper,
+  // .accesswrapper {
+  //   padding-top: 50px;
+  //   text-align: center;
+  //   display: flex;
+  //   flex-direction: column;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
+
+  // .secSubTitle {
+  //   font-size: 20px;
+  // }
+
+  // .secText {
+  //   font-size: 16px;
+  //   text-align: center;
+  // }
+
+  // .menu_block,
+  // .access_block {
+  //   display: block;
+  // }
+
+  // .left-menu,
+  // .right-menu {
+  //   width: 100%;
+  // }
+
+  // .site_area {
+  //   display: none;
+  // }
+
+  // .footer_menu {
+  //   justify-content: center;
+  //   padding: 20px 0;
+  // }
+
+  // .copyright {
+  //   padding-bottom: 20px;
+  //   font-size: 0.5rem;
+  // }
+
+  // .title-view {
+  //   height: 30vh;
+  // }
+
+  // .page_text h1 {
+  //   font-size: 2rem;
+  // }
+
+  // .page_text p {
+  //   font-size: 1rem;
+  // }
+
+  // .topics_area .post_box {
+  //   width: 100%;
+  // }
+
+  // .main_content {
+  //   margin-right: 0;
+  // }
+
+  // .cat_list {
+  //   margin-bottom: 30px;
+  // }
+
+  // .sidebar {
+  //   display: none;
+  // }
+
+  // .post_content {
+  //   font-size: 14px;
+  // }
+// }

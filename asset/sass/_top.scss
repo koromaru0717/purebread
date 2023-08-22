@@ -1,0 +1,203 @@
+@use "./common/variables" as va;
+
+/*-------------------------------------------
+ファーストビュー
+-------------------------------------------*/
+#first-view,
+#about {
+  background-color: #fff;
+  /* width: 1400px; */
+  height: 800px;
+  margin-bottom: 30px;
+  background-size: cover;
+  /* 背景画像を要素に完全にカバーする */
+  background-position: center;
+  /* 背景画像を要素の中央に配置する */
+  background-repeat: no-repeat;
+  /*画像が繰り返すのを防ぐ*/
+}
+
+#first-view {
+  background-image: url(/asset/img/top/top.png);
+  background-position: center;
+  /* 背景画像を要素の中央に配置する */
+}
+
+/*-------------------------------------------
+アバウト
+-------------------------------------------*/
+#about {
+  background-image: url(/asset/img/top/aboutUs.png);
+}
+
+.aboutwrapper,
+.blogInfowrapper,
+.menuwrapper {
+  padding-top: 80px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.secTitle {
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.secSubTitle {
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.secText {
+  max-width: 800px;
+  font-size: 24px;
+  line-height: 60px;
+  text-align: left;
+}
+
+/*-------------------------------------------
+ブログ
+-------------------------------------------*/
+#blogInfo {
+  margin-bottom: 30px;
+}
+
+.posts_block {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  padding: 0px;
+  gap: 50px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.post_block {
+  width: 204px;
+  height: 324px;
+
+  /* margin: 0 auto; */
+}
+
+.img_wrap {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.post_cat {
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 90px;
+  height: 30px;
+  padding: 0 10px;
+  color: #668e68;
+  font-size: 11px;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.textbox {
+  text-align: left;
+}
+
+.post_data {
+  margin-bottom: 10px;
+  font-size: 12px;
+}
+
+.btn_area {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.btn {
+  display: inline-block;
+  width: 210px;
+  height: 50px;
+  background: #b98e51;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 50px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s;
+  border-radius: 22.5px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+}
+
+.btn:active {
+  transform: translateY(2px);
+}
+
+/* ボタン下調整 */
+.posts_block,
+.menu_block {
+  padding-bottom: 80px;
+}
+
+/*-------------------------------------------
+メニュー
+-------------------------------------------*/
+#menu {
+  background-color: #faebdd;
+}
+
+.menu_block,
+.access_block {
+  display: flex;
+}
+
+.left-menu,
+.right-menu {
+  width: 50%;
+}
+
+.box {
+  padding: 20px;
+}
+
+.wrap_col2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+#access {
+  margin-bottom: 30px;
+}
+
+.accescc_texts {
+  text-align: left;
+}
+
+.accescc_texts li {
+  padding-bottom: 32px;
+}
+
+.access_map {
+  max-width: 100%;
+}
+
+@include va.mq(va.$bp-medium){
+  .link_box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
