@@ -1,6 +1,9 @@
+
 /*-------------------------------------------
 メニューページ
 -------------------------------------------*/
+@use"./common/variables" as va;
+
 .title-view {
   position: relative;
   height: 40vh;
@@ -8,44 +11,41 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.title-view:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url("/asset/img/menu/pageTitle.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-color: #b98e51;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.title-view,
-.menu_section {
   margin-bottom: 80px;
-}
 
-.menu_section {
-  text-align: center;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/asset/img/menu/pageTitle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #b98e51;
+    opacity: 0.3;
+    z-index: -1;
+
+  }
 }
 
 .page_text {
   width: 100%;
+
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
 }
 
-.page_text h1 {
-  font-weight: bold;
-  font-size: 3rem;
-}
-
-.page_text p {
-  font-size: 1.5rem;
+.menu_list_title {
+  text-align: center;
 }
 
 .menus {
