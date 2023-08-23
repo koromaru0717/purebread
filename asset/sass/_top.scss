@@ -210,6 +210,9 @@
 
 .menuwrapper {
   @include secwrapper();
+  .btn_area {
+    padding-bottom: 30px;
+  }
 }
 
 .menu_block,

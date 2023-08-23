@@ -32,24 +32,38 @@
   padding-bottom: 40px;
   display: flex;
   justify-content: space-between;
+  @include va.mq (va.$bp-small) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
 }
 
 .site_area {
   text-align: left;
+  margin-left: 30px;
+  @include va.mq (va.$bp-small){
+    margin-left: 0;
+    margin-top: 30px;
+  }
 }
 
 .site_map_area {
   display: flex;
   margin-bottom: 20px;
-  justify-content: space-around;
-}
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  @include va.mq (va.$bp-medium){
+    display: none;
+  }
 
-.site_map_area li {
-  padding-right: 30px;
-}
-
-.site_map_area li:last-child {
-  padding-right: 0;
+  li {
+    padding-bottom: 10px; 
+    padding-right: 30px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
 }
 
 .sns_area {
@@ -60,4 +74,8 @@
 .copyright {
   text-align: center;
   padding-bottom: 60px;
+}
+
+.footer_logo {
+  width: 180px;
 }
