@@ -649,6 +649,9 @@ SP
 .menu {
   margin: 20px 21px;
 }
+.menu .menu_text {
+  text-align: center;
+}
 
 .menu_img_area {
   padding-bottom: 10px;
