@@ -44,7 +44,10 @@ li {
   width: 100%;
   max-width: va.$bp-extra-large;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 30px;
+  @include va.mq(va.$bp-small){
+    padding: 0 20px;
+  }
 }
 
 .content {

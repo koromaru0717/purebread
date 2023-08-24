@@ -1,14 +1,24 @@
 /*-------------------------------------------
 ブログメニューページ
 -------------------------------------------*/
+@use "../common/variables" as va;
 
 .container {
   display: flex;
+
+  @include va.mq(va.$bp-small) {
+    display: block;
+  }
 }
 
 .main_content {
   flex: 3;
-  margin-right: 60px;
+  margin-right: 2em;
+
+  @include va.mq(va.$bp-small) {
+    margin-right: 0;
+    margin-bottom: 3em;
+  }
 }
 
 .sidebar {
@@ -17,29 +27,55 @@
 
 .main_header,
 .post_content {
-  font-size: 16px;
-  margin-bottom: 30px;
+  font-size: 1.0rem;
+  margin-bottom: 2em;
+}
+
+.post_content p {
+  letter-spacing: 0.25em;
+  line-height: 2.0em;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 0.9rem;
+  }
+
+  @include va.mq(va.$bp-small) {
+    font-size: 0.85rem;
+  }
+
+}
+
+.article_header .post_data {
+  padding: 10px 0;
+  font-size: 0.8rem
 }
 
 .article_title {
+  font-weight: bold;
   font-size: 2rem;
   padding-bottom: 20px;
   border-bottom: 2px solid #b98e51;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 1.5rem;
+  }
+
+  @include va.mq(va.$bp-small) {
+    font-size: 1.25rem;
+  }
 }
 
 .cat_list {
-  margin-bottom: 70px;
-}
-
-.cat_list a {
-  display: inline-block;
-  background: #b98e51;
-  min-width: 140px;
-  height: 30px;
-  color: #ffffff;
-  text-align: center;
-  line-height: 32px;
-  letter-spacing: 0.34em;
+  a {
+    display: inline-block;
+    background: #b98e51;
+    min-width: 140px;
+    height: 30px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 32px;
+    letter-spacing: 0.34em;
+  }
 }
 
 .back_link,
@@ -53,17 +89,17 @@
   height: 60px;
   text-align: center;
   display: block;
-}
 
-.back_btn span {
-  background: url(/asset/img/blogDtl/back.png) left center no-repeat;
-  background-size: 20px auto;
-  padding: 0 0 0 38px;
-  color: #ffffff;
-  font-weight: bold;
-  line-height: 60px;
-  letter-spacing: 0.2em;
-  display: inline-block;
+  span {
+    background: url(/asset/img/blogDtl/back.png) left center no-repeat;
+    background-size: 20px auto;
+    padding: 0 0 0 38px;
+    color: #ffffff;
+    font-weight: bold;
+    line-height: 60px;
+    letter-spacing: 0.2em;
+    display: inline-block;
+  }
 }
 
 .single_navi_block {
@@ -89,14 +125,14 @@
   border-radius: 5px;
   font-size: 16px;
   transition: background-color 0.3s;
-}
 
-.back-button:hover {
-  background-color: #e2e6ea;
-}
+  &:hover {
+    background-color: #e2e6ea;
+  }
 
-.back-button i {
-  margin-right: 5px;
+  i {
+    margin-right: 5px;
+  }
 }
 
 .block_title {
