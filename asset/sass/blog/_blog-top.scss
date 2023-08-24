@@ -6,24 +6,32 @@
 
 .latest_section,
 .page_navigation {
-  margin-bottom: 60px;
+  margin-bottom: 4em;
 }
 
-.latest_section .img_wrap {
-  margin-right: 80px;
-}
+.latest_section {
+  .img_wrap {
+    margin-right: 5em;
 
-.latest_section .box_img {
-  max-height: 100%;
+    @include va.mq(va.$bp-small) {
+      margin-right: 0;
+    }
+
+    .box_img {
+      max-height: 100%;
+    }
+  }
+
+  .link_box {
+    @include va.mq(va.$bp-small) {
+      display: block;
+    }
+  }
 }
 
 .page_navigation {
   text-align: center;
-  margin-top: 60px;
-}
-
-.latest_text_area {
-  margin-left: 90px;
+  margin-top: 4em;
 }
 
 .link_box {
@@ -43,11 +51,15 @@
 }
 
 .new_icon {
-  background-image: url('/asset/img/blogInfo/newMark.png');
-  background-position: 50px;
-  padding: 70px 100px 0 0;
-  margin: 60px 0 45px 0;
   font-size: 2rem;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 1.75rem;
+  }
+
+  @include va.mq(va.$bp-small) {
+    font-size: 1.5rem;
+  }
 }
 
 .post_data,
@@ -56,30 +68,39 @@
 }
 
 .post_title {
+  padding-top: 0.5em;
   color: va.$base-font-color;
   word-wrap: break-word;
 }
 
 .post_data {
-  margin-bottom: 20px;
+  padding-top: 1em;
   color: #A1928B;
 }
 
 .topics_area {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+
+  .post_box {
+    width: 33%;
+
+    @include va.mq(va.$bp-medium) {
+      width: 50%;
+    }
+
+    @include va.mq(va.$bp-small) {
+      width: 100%;
+    }
+
+    margin-bottom: 2em;
+
+    .link_box {
+      display: block;
+    }
+  }
 }
 
-.topics_area .post_box {
-  width: 300px;
-  margin: 40px 40px 0 0;
-}
-
-.topics_area .post_box .link_box {
-  display: block;
-}
-
-.topics_area .textbox {
-  padding-left: 0;
+.post_box {
+  padding: 0 0.75em;
 }
