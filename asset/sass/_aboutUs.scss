@@ -1,0 +1,104 @@
+@use "./common/variables" as va;
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4rem;
+
+  img {
+    max-width: 100%;
+    height: auto;
+
+    @include va.mq(va.$bp_small) {
+      height: 30vh;
+      width: auto;
+      object-fit: cover;
+    }
+
+  }
+
+  p {
+    padding-top: 2rem;
+    font-size: 1.0rem;
+  }
+}
+
+.obsessions-alia {
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 3rem;
+
+    @include va.mq(va.$bp_small) {
+      font-size: 2rem;
+    }
+  }
+
+  &__detail {
+    display: flex;
+    flex-direction: column;
+
+    .obsession {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 3rem;
+
+      @include va.mq(va.$bp_small) {
+        display: block;
+      }
+
+      &__texts {
+        flex: 1;
+
+        &__title {
+          font-size: 1.5rem;
+          font-weight: bold;
+          padding-bottom: 1rem;
+        }
+
+        &__detail {
+          font-size: 1rem;
+          padding-bottom: 1.5rem;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        flex-direction: row-reverse;
+
+        .obsession__texts {
+          margin-right: 2rem;
+
+          @include va.mq(va.$bp_small) {
+            margin-right: 0;
+          }
+        }
+      }
+
+      &:nth-child(2n) {
+        flex-direction: row;
+
+        .obsession__texts {
+          margin-left: 2rem;
+
+          @include va.mq(va.$bp_small) {
+            margin-left: 0;
+          }
+        }
+      }
+
+      img {
+        max-width: 50%;
+        height: auto;
+
+        @include va.mq(va.$bp_small) {
+          max-width: 100%;
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}
