@@ -1,0 +1,81 @@
+@use "../common/variables" as va;
+
+#access {
+  margin-bottom: 30px;
+
+  .accescc_texts {
+    text-align: left;
+
+    li {
+      padding-bottom: 32px;
+    }
+  }
+
+  .access_map {
+    max-width: 100%;
+  }
+
+  @include va.mq(va.$bp-medium) {
+    .link_box {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+}
+
+#footer {
+  background-color: #d09359;
+}
+
+.footer_menu {
+  padding-top: 60px;
+  padding-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+  @include va.mq (va.$bp-small) {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+
+.site_area {
+  text-align: left;
+  margin-left: 30px;
+  @include va.mq (va.$bp-small){
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.site_map_area {
+  display: flex;
+  margin-bottom: 20px;
+  justify-content:flex-start;
+  flex-wrap: wrap;
+  @include va.mq (va.$bp-medium){
+    display: none;
+  }
+
+  li {
+    padding-bottom: 10px; 
+    padding-right: 30px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+}
+
+.sns_area {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.copyright {
+  text-align: center;
+  padding-bottom: 60px;
+}
+
+.footer_logo {
+  width: 180px;
+}

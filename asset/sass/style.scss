@@ -1,0 +1,13 @@
+@use "./common/common";
+
+@use "./components/header";
+@use "./components/footer";
+@use "./components/sns-icons";
+@use "./components/button";
+
+@use "top";
+@use "menu";
+@use "aboutUs";
+
+@use "./blog/blog-top";
+@use "./blog/blog-detail";

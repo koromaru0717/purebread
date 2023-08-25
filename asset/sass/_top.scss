@@ -1,0 +1,246 @@
+@use "./common/variables" as va;
+
+@mixin view {
+  background-color: #fff;
+  height: 60vh;
+  margin-bottom: 60px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+@mixin secwrapper {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/*-------------------------------------------
+ファーストビューとアバウト
+-------------------------------------------*/
+#first-view {
+  @include view;
+  display: flex;
+  align-items: center;
+  position: relative;
+  background-image: url('/asset/img/top/top.png');
+
+  @include va.mq (va.$bp-small) {
+    height: 90vh;
+  }
+}
+
+#about {
+  @include view;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/asset/img/top/aboutUs.png');
+
+  @include va.mq (va.$bp-small) {
+    height: 80vh;
+  }
+
+  @include va.mq (va.$bp-extra-small) {
+    height: 90vh;
+  }
+}
+
+.aboutwrapper // .menuwrapper  
+
+  {
+  @include secwrapper();
+}
+
+.secTitle {
+  padding-top: 50px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  text-align: center;
+
+  @include va.mq (va.$bp-large) {
+    font-size: 2rem;
+  }
+
+  @include va.mq (va.$bp-medium) {
+    font-size: 1.75rem;
+  }
+
+  @include va.mq (va.$bp-small) {
+    font-size: 1.5rem;
+  }
+}
+
+.secSubTitle {
+  font-size: 1.75rem;
+  margin: 40px 0;
+
+  @include va.mq (va.$bp-medium) {
+    font-size: 1.5rem;
+  }
+
+  @include va.mq (va.$bp-small) {
+    font-size: 1.25rem;
+  }
+}
+
+.secText {
+  max-width: 800px;
+  font-size: 1.25rem;
+  line-height: 60px;
+  text-align: left;
+
+  @include va.mq (va.$bp-medium) {
+    font-size: 1.1rem;
+  }
+
+  @include va.mq (va.$bp-small) {
+    font-size: 0.9rem;
+  }
+
+}
+
+.text-alia {
+  margin-bottom: 30px;
+
+  @include va.mq (va.$bp-medium) {
+    padding: 0 30px;
+  }
+
+  @include va.mq (va.$bp-small) {
+    padding: 0 10px;
+  }
+}
+
+.test {
+  // display: flex;
+  align-items: center;
+}
+
+/*-------------------------------------------
+ブログ
+-------------------------------------------*/
+#blogInfo {
+  margin-bottom: 30px;
+}
+
+.blogInfowrapper {
+  @include secwrapper();
+
+  .secTitle {
+    padding-bottom: 40px;
+  }
+
+  @include va.mq (va.$bp-medium) {
+    padding-bottom: 30px;
+  }
+}
+
+.posts_block {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 0px;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  .post_block {
+    width: 210px;
+
+    @include va.mq (950px) {
+      width: 45%;
+    }
+
+    @include va.mq (va.$bp-small) {
+      width: 80%;
+    }
+
+    .img_wrap {
+      position: relative;
+      margin-bottom: 20px;
+
+      .post_cat {
+        background-color: rgba(255, 255, 255, 0.9);
+        min-width: 90px;
+        height: 30px;
+        padding: 0 10px;
+        color: #668e68;
+        font-size: 11px;
+        font-size: 1.1rem;
+        text-align: center;
+        font-weight: bold;
+        line-height: 30px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .textbox {
+      text-align: left;
+
+      .post_data {
+        margin-bottom: 10px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/* ボタン下調整 */
+.posts_block,
+.menu_block {
+  padding-bottom: 80px;
+
+  @include va.mq (va.$bp-medium) {
+    padding-bottom: 30px;
+  }
+}
+
+/*-------------------------------------------
+メニュー
+-------------------------------------------*/
+#menu {
+  background-color: #faebdd;
+}
+
+.menuwrapper {
+  @include secwrapper();
+  .btn_area {
+    padding-bottom: 30px;
+  }
+}
+
+.menu_block,
+.access_block {
+  display: flex;
+
+  @include va.mq (va.$bp-small) {
+    display: block;
+  }
+
+  .left-menu,
+  .right-menu {
+    width: 50%;
+
+    @include va.mq (va.$bp-small) {
+      width: 100%;
+    }
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .wrap_col2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+  }
+}

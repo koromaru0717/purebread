@@ -1,0 +1,228 @@
+@use '../common/variables' as va;
+
+$header-lg: 100px;
+$header-md: 80px;
+$header-sm: 60px;
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+  height: $header-lg;
+  padding: 0px 10px;
+  position: relative;
+
+  @include va.mq(va.$bp-medium) {
+    height: $header-md;
+  }
+
+  @include va.mq(va.$bp-small) {
+    height: $header-sm;
+  }
+
+  .site-title {
+    width: 100px;
+    line-height: 1px;
+    position: absolute;
+    top: 30px;
+    left: 60px;
+
+    @include va.mq(va.$bp-medium) {
+      top: 20px;
+      left: 20px;
+    }
+
+    @include va.mq(va.$bp-small) {
+      top: 10px;
+      left: 15px;
+    }
+
+    a {
+      display: inline-block;
+    }
+  }
+}
+
+.hamburger {
+  width: $header-lg;
+  height: $header-lg;
+  background-color: #6f926f;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.3s;
+
+  @include va.mq(va.$bp-medium) {
+    width: $header-md;
+    height: $header-md;
+  }
+
+  @include va.mq(va.$bp-small) {
+    width: $header-sm;
+    height: $header-sm;
+  }
+
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  span {
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 25px;
+    transition: 0.3s ease-in-out;
+
+    @include va.mq(va.$bp-medium) {
+      left: 20px;
+    }
+
+    @include va.mq(va.$bp-small) {
+      width: 40px;
+      left: 12px;
+    }
+
+    &:nth-child(1) {
+      top: 36px;
+
+      @include va.mq(va.$bp-medium) {
+        top: 25px
+      }
+
+      @include va.mq(va.$bp-small) {
+        top: 14px
+      }
+
+    }
+
+    &:nth-child(2) {
+      top: 50px;
+
+      @include va.mq(va.$bp-medium) {
+        top: 39px
+      }
+
+      @include va.mq(va.$bp-small) {
+        top: 28px
+      }
+
+    }
+
+    &:nth-child(3) {
+      top: 64px;
+
+      @include va.mq(va.$bp-medium) {
+        top: 53px
+      }
+
+      @include va.mq(va.$bp-small) {
+        top: 42px
+      }
+    }
+  }
+
+  &.active {
+    span {
+      &:nth-child(1) {
+        top: 47px;
+        left: 25px;
+        background: #fff;
+        transform: rotate(-45deg);
+
+        @include va.mq(va.$bp-medium) {
+          left: 20px
+        }
+
+        @include va.mq(va.$bp-small) {
+          top: 27px;
+          left: 13px;
+        }
+
+      }
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        top: 47px;
+        background: #fff;
+        transform: rotate(45deg);
+
+        @include va.mq(va.$bp-small) {
+          top: 27px
+        }
+
+      }
+    }
+  }
+}
+
+#navi {
+  width: 100%;
+  height: 100vh;
+  background-color: #6f926f;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+  visibility: hidden;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .logo {
+    width: 200px;
+    margin-top: $header-lg;
+
+    @include va.mq(va.$bp-medium) {
+      margin-top: $header-md;
+    }
+
+    @include va.mq(va.$bp-small) {
+      margin-top: $header-sm;
+    }
+  }
+
+  .navi__menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pages {
+      margin: 1rem 0;
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #fff;
+        font-weight: bold;
+
+        p {
+          font-size: 1.5rem;
+
+          @include va.mq(va.$bp-medium) {
+            font-size: 1.25rem;
+          }
+
+          @include va.mq(va.$bp-small) {
+            font-size: 1.0rem;
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 1em;
+    }
+  }
+}
