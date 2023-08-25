@@ -1,15 +1,23 @@
 @use '../common/variables' as va;
 
+$header-lg: 100px;
+$header-md: 80px;
+$header-sm: 60px;
+
 /*-------------------------------------------
 ヘッダー
 -------------------------------------------*/
 #header {
-  height: 100px;
+  height: $header-lg;
   padding: 0px 10px;
   position: relative;
 
   @include va.mq(va.$bp-medium) {
-    height: 80px;
+    height: $header-md;
+  }
+
+  @include va.mq(va.$bp-small) {
+    height: $header-sm;
   }
 
   .site-title {
@@ -24,6 +32,11 @@
       left: 20px;
     }
 
+    @include va.mq(va.$bp-small) {
+      top: 10px;
+      left: 15px;
+    }
+
     a {
       display: inline-block;
     }
@@ -31,8 +44,8 @@
 }
 
 .hamburger {
-  width: 100px;
-  height: 100px;
+  width: $header-lg;
+  height: $header-lg;
   background-color: #6f926f;
   position: fixed;
   top: 0;
@@ -42,8 +55,13 @@
   transition: 0.3s;
 
   @include va.mq(va.$bp-medium) {
-    width: 80px;
-    height: 80px;
+    width: $header-md;
+    height: $header-md;
+  }
+
+  @include va.mq(va.$bp-small) {
+    width: $header-sm;
+    height: $header-sm;
   }
 
 
@@ -60,7 +78,12 @@
     transition: 0.3s ease-in-out;
 
     @include va.mq(va.$bp-medium) {
-      left: 20px
+      left: 20px;
+    }
+
+    @include va.mq(va.$bp-small) {
+      width: 40px;
+      left: 12px;
     }
 
     &:nth-child(1) {
@@ -69,6 +92,11 @@
       @include va.mq(va.$bp-medium) {
         top: 25px
       }
+
+      @include va.mq(va.$bp-small) {
+        top: 14px
+      }
+
     }
 
     &:nth-child(2) {
@@ -77,6 +105,11 @@
       @include va.mq(va.$bp-medium) {
         top: 39px
       }
+
+      @include va.mq(va.$bp-small) {
+        top: 28px
+      }
+
     }
 
     &:nth-child(3) {
@@ -84,6 +117,10 @@
 
       @include va.mq(va.$bp-medium) {
         top: 53px
+      }
+
+      @include va.mq(va.$bp-small) {
+        top: 42px
       }
     }
   }
@@ -99,6 +136,12 @@
         @include va.mq(va.$bp-medium) {
           left: 20px
         }
+
+        @include va.mq(va.$bp-small) {
+          top: 27px;
+          left: 13px;
+        }
+
       }
 
       &:nth-child(2),
@@ -106,6 +149,11 @@
         top: 47px;
         background: #fff;
         transform: rotate(45deg);
+
+        @include va.mq(va.$bp-small) {
+          top: 27px
+        }
+
       }
     }
   }
@@ -131,22 +179,50 @@
   }
 
   .logo {
-    width: 100px;
-    position: absolute;
-    top: 40px;
-    left: 50px;
-  }
+    width: 200px;
+    margin-top: $header-lg;
 
-  .menu {
-    margin: 80px 0 40px 0;
-
-    li {
-      margin-bottom: 20px;
+    @include va.mq(va.$bp-medium) {
+      margin-top: $header-md;
     }
 
-    a {
-      color: #fff;
-      font-weight: bold;
+    @include va.mq(va.$bp-small) {
+      margin-top: $header-sm;
+    }
+  }
+
+  .navi__menus {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .pages {
+      margin: 1rem 0;
+
+      li {
+        margin-bottom: 20px;
+      }
+
+      a {
+        color: #fff;
+        font-weight: bold;
+
+        p {
+          font-size: 1.5rem;
+
+          @include va.mq(va.$bp-medium) {
+            font-size: 1.25rem;
+          }
+
+          @include va.mq(va.$bp-small) {
+            font-size: 1.0rem;
+          }
+        }
+      }
+    }
+
+    .btn {
+      margin-bottom: 1em;
     }
   }
 }
