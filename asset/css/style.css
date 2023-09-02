@@ -476,7 +476,7 @@ li {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url("/asset/img/top/top.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/top/top.png");
 }
 @media (max-width: 540px) {
   #first-view {
