@@ -91,7 +91,7 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("/asset/img/menu/pageTitle.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/menu/pageTitle.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -495,7 +495,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/asset/img/top/aboutUs.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/top/aboutUs.png");
 }
 @media (max-width: 540px) {
   #about {
@@ -1051,7 +1051,7 @@ li {
   display: block;
 }
 .back_btn span {
-  background: url(/asset/img/blogDtl/back.png) left center no-repeat;
+  background: url("/wp-content/themes/purebread/asset/img/blogDtl/back.png") left center no-repeat;
   background-size: 20px auto;
   padding: 0 0 0 38px;
   color: #ffffff;
@@ -1093,7 +1093,7 @@ li {
 }
 
 .block_title {
-  background: url(/asset/img/blogDtl/title.png) center top no-repeat;
+  background: url(/wp-content/themes/purebread/asset/img/blogDtl/title.png) center top no-repeat;
   background-size: 60px auto;
   border-bottom: 1px solid #b98e51;
   padding: 34px 0 12px;
