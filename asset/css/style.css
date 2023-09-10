@@ -869,6 +869,64 @@ li {
   }
 }
 
+.form .form_row {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  -js-display: flex;
+}
+@media (max-width: 840px) {
+  .form .form_row {
+    display: block;
+  }
+}
+.form .form_row .form_label {
+  width: 200px;
+  font-size: 14px;
+}
+@media (max-width: 540px) {
+  .form .form_row .form_label {
+    font-size: 14px;
+  }
+}
+.form .form_row .form_label span {
+  color: #0293AD;
+  border: 1px solid #0293AD;
+  padding: 2px 5px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+@media (max-width: 540px) {
+  .form .form_row .form_label span {
+    font-size: 12px;
+  }
+}
+.form .form_row .form_content {
+  width: calc(100% - 200px);
+}
+@media (max-width: 840px) {
+  .form .form_row .form_content {
+    margin-top: 15px;
+    width: calc(100% - 50px);
+  }
+}
+.form .form_row .form_content input,
+.form .form_row .form_content textarea {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 5px 5px 5px 5px !important;
+  border: 1px solid #70462E;
+}
+.form .form_row .form_content textarea {
+  min-height: 200px;
+}
+.form .form_row .form_content.form_content-tel input {
+  width: 6em;
+}
+.form .form_row-center {
+  justify-content: center;
+}
+
 /*-------------------------------------------
 ブログトップページ
 -------------------------------------------*/
