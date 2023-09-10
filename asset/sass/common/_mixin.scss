@@ -1,0 +1,35 @@
+@use "./variables" as va;
+
+// flex IE対策
+@mixin flex {
+  display: flex;
+  -js-display: flex;
+}
+
+// Font Size
+@mixin fs($size) {
+  font-size: $size+px;
+
+  @include va.mq(va.$bp_small) {
+    @if $size >=18 {
+      font-size: 18px;
+    }
+
+    @else {
+      font-size: $size+px;
+    }
+  }
+}
+
+// Font Size (!important)
+@mixin _fs($size) {
+  font-size: $size+px !important;
+
+  @include va.mq(va.$bp_small) {
+    font-size: $size+px !important;
+  }
+}
+
+@mixin radius ($topLeft: 5px, $topRight: 5px, $bottomRight: 5px, $bottomLeft: 5px) {
+  border-radius: $topLeft $topRight $bottomRight $bottomLeft !important;
+}
