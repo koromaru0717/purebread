@@ -1,8 +1,8 @@
 <?php get_header(); ?>
 <section class="title-view">
   <div class="page_text">
-    <h1>ＢＬＯＧ＆ＩＮＦＯ</h1>　
-    <p>ブログ・お知らせ</p>
+    <h1>BLOG</h1>　
+    <p>ブログ</p>
   </div>
 </section>
 
