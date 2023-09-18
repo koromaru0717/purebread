@@ -1,0 +1,106 @@
+/*-------------------------------------------
+ブログトップページ
+-------------------------------------------*/
+
+@use "../common/variables" as va;
+
+.latest_section,
+.page_navigation {
+  margin-bottom: 4em;
+}
+
+.latest_section {
+  .img_wrap {
+    margin-right: 5em;
+
+    @include va.mq(va.$bp-small) {
+      margin-right: 0;
+    }
+
+    .box_img {
+      max-height: 100%;
+    }
+  }
+
+  .link_box {
+    @include va.mq(va.$bp-small) {
+      display: block;
+    }
+  }
+}
+
+.page_navigation {
+  text-align: center;
+  margin-top: 4em;
+}
+
+.link_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.top_link_box {
+  flex-direction: column;
+}
+
+.box_img {
+  max-height: 195px;
+  overflow: hidden;
+}
+
+.new_icon {
+  font-size: 2rem;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 1.75rem;
+  }
+
+  @include va.mq(va.$bp-small) {
+    font-size: 1.5rem;
+  }
+}
+
+.post_data,
+.post_title {
+  letter-spacing: 7px;
+}
+
+.post_title {
+  padding-top: 0.5em;
+  color: va.$base-font-color;
+  word-wrap: break-word;
+}
+
+.post_data {
+  padding-top: 1em;
+  color: #A1928B;
+}
+
+.topics_area {
+  display: flex;
+  flex-wrap: wrap;
+
+  .post_box {
+    width: 33%;
+
+    @include va.mq(va.$bp-medium) {
+      width: 50%;
+    }
+
+    @include va.mq(va.$bp-small) {
+      width: 100%;
+    }
+
+    margin-bottom: 2em;
+
+    .link_box {
+      display: block;
+    }
+  }
+}
+
+.post_box {
+  padding: 0 0.75em;
+}

@@ -1,0 +1,37 @@
+/*-------------------------------------------
+メニューページ
+-------------------------------------------*/
+@use"./common/variables" as va;
+
+.menu_list_title {
+  text-align: center;
+}
+
+.menus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu {
+  margin: 20px 21px;
+
+  .menu_text {
+    text-align: center;
+  }
+}
+
+
+.menu_img_area {
+  padding-bottom: 10px;
+}
+
+.menu_img {
+  max-width: 280px;
+  max-height: 230px;
+}
+
+.menu_list_title {
+  font-size: 1.5rem;
+}

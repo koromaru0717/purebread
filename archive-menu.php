@@ -8,10 +8,9 @@
 </section>
 
 <main id="main" class="wrapper">
-
   <?php
   // カスタム投稿タイプのタクソノミーを指定
-  $taxonomy = 'menu_terms';
+  $taxonomy = 'kind';
 
   // タームの順序を定義
   $term_order = array('seasonal', 'side-dish-bread', 'sweet-bread', 'others');
@@ -36,7 +35,9 @@
   ?>
 
     <section class="menu_section">
-      <h2 class="menu_list_title light_font"><?php echo $term->name; ?></h2>
+      <h2 class="menu_list_title light_font">
+        <?php echo $term->name; ?>
+      </h2>
 
       <div class="menus">
         <?php while ($query->have_posts()) : $query->the_post(); ?>

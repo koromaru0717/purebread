@@ -1,0 +1,135 @@
+@use "./variables" as va;
+
+html {
+  font-size: 100%;
+}
+
+/*
+フッターを画面下に配置するために、
+「position: relative;」を設定
+「min-height」で最小の高さを画面の高さにあわせる
+*/
+body {
+  color: va.$base-font-color;
+  font-size: 0.875rem;
+  min-height: 100vh;
+  position: relative;
+  letter-spacing: 3px;
+  font-family: 'Roboto', 'Hiragino Sans', 'Meiryo', 'Hiragino Kaku Gothic ProN', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+.light_font {
+  color: va.$light-font-color;
+  font-weight: normal;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: va.$bp-extra-large;
+  margin: 0 auto;
+  padding: 0 30px;
+  @include va.mq(va.$bp-small){
+    padding: 0 20px;
+  }
+}
+
+.content {
+  padding-top: 120px;
+  padding-bottom: 160px;
+}
+
+.site-title a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+
+.page-title {
+  font-size: 0.875rem;
+  font-weight: normal;
+  margin-bottom: 30px;
+}
+
+/*-------------------------------------------
+トップページ 以外のファーストビュー
+-------------------------------------------*/
+.title-view {
+  position: relative;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 80px;
+
+  @include va.mq (va.$bp-medium) {
+    height: 20vh;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url("/wp-content/themes/purebread/asset/img/menu/pageTitle.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: #b98e51;
+    opacity: 0.3;
+    z-index: -1;
+  }
+}
+
+.page_text {
+  width: 100%;
+
+  h1 {
+    font-weight: bold;
+    font-size: 3rem;
+
+    @include va.mq(va.$bp-medium) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    @include va.mq(va.$bp-medium) {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+/*-------------------------------------------
+404ページ
+-------------------------------------------*/
+
+.not_found p{
+  font-size: 1.25rem;
+  padding: 2.5rem 1.5rem;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 1.0rem;
+  }
+}

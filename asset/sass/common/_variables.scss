@@ -1,0 +1,18 @@
+// 変数を定義
+
+// ブレイクポイント
+$bp-extra-small: 375px;
+$bp-small: 540px;
+$bp-medium: 840px;
+$bp-large: 1140px;
+$bp-extra-large: 1280px;
+
+@mixin mq ($bp) {
+  @media (max-width: ($bp)) {
+    @content;
+  }
+}
+
+// 色
+$base-font-color: #655046;
+$light-font-color: #b98e51;

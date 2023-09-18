@@ -1,59 +1,35 @@
-jQuery(function ($) {
-  var $navi = $("#navi");
-  var $header = $("#header");
-  var transitionTime = 500; // transitionの時間
+$(function () {
+  /*=================================================
+  ハンバーガ―メニュー
+  ===================================================*/
+  // ハンバーガーメニューをクリックした時
+  $('.hamburger').on('click', function () {
+    // ハンバーガーメニューの共通処理を呼び出す
+    hamburger();
+  });
+  // メニューのリンクをクリックした時
+  $('#navi a').on('click', function () {
+    // ハンバーガーメニューの共通処理を呼び出す
+    hamburger();
+  });
 
-  /**
-   * functions
-   */
+  /*=================================================
+ハンバーガ―メニュー共通処理
+===================================================*/
+  // ハンバーガーメニューをクリックした時とメニュー内のリンクをクリックした時の
+  // 処理が同じなので処理を共通化する
+  function hamburger() {
+    // toggleClassを使用することで、hamburgerクラスにactiveクラスが存在する場合は削除、
+    // 存在しない場合を追加する処理を自動で行ってくれる
+    $('.hamburger').toggleClass('active');
+    $('#navi').toggleClass('active'); // この行を変更
 
-  function closeMenu() {
-    $navi.css("transform", "translateX(-100%)");
-    setTimeout(function () {
-      $navi.hide();
-    }, transitionTime);
-    $header.removeClass("open");
-  }
-
-  function openMenu() {
-    $navi.show();
-    // displayをblockにした後に、transformを変更する
-    setTimeout(function () {
-      $navi.css("transform", "translateX(0)");
-    }, 0);
-    $header.addClass("open");
-  }
-
-  $(".toggle_btn").on("click", function () {
-    if ($header.hasClass("open")) {
-      closeMenu();
+    if ($('.hamburger').hasClass('active')) {
+      // hamburgerクラスにactiveクラスが存在する場合は、naviにもactiveクラスを追加する
+      $('#navi').addClass('active');
     } else {
-      openMenu();
+      // hamburgerクラスにactiveクラスが存在しない場合は、naviからactiveクラスを削除する
+      $('#navi').removeClass('active');
     }
-  });
-
-  // メニュー内のリンクがクリックされたときにメニューを閉じる
-  $navi.find("a").on("click", function (event) {
-    var href = $(this).attr("href");
-    var splitHref = href.split("#");
-    var isTopPage = window.location.pathname == "/";
-
-    // リンク先がページ内リンクで、現在のページがトップページの場合
-    if (splitHref.length > 1 && isTopPage) {
-      var id = splitHref[splitHref.length - 1];
-      var target = $("#" + id);
-      if (target.length) {
-        event.preventDefault(); // デフォルトのクリックイベントをキャンセル
-        var position = target.offset().top; // リンク先要素の位置を取得
-        $("body, html").animate({ scrollTop: position }, 500, "swing"); // スムーズスクロール
-        closeMenu(); // メニューを閉じる
-      }
-    } else {
-      closeMenu(); // メニューを閉じる
-    }
-  });
-
-  $("#mask, #navi a").on("click", function () {
-    closeMenu();
-  });
+  }
 });
