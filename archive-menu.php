@@ -10,7 +10,7 @@
 <main id="main" class="wrapper">
   <?php
   // カスタム投稿タイプのタクソノミーを指定
-  $taxonomy = 'menu';
+  $taxonomy = 'menu_terms';
 
   // タームの順序を定義
   $term_order = array('seasonal', 'side-dish-bread', 'sweet-bread', 'others');
