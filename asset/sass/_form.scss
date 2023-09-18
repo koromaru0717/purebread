@@ -1,0 +1,59 @@
+@use "./common/variables" as va;
+@use "./common/mixin" as mixin;
+
+.form {
+  .form_row {
+    padding: 15px;
+    width: 100%;
+    @include mixin.flex;
+
+    @include va.mq(va.$bp_medium) {
+      display: block;
+    }
+
+
+    .form_label {
+      width: 200px;
+      @include mixin.fs(14);
+
+      span {
+        color: #0293AD;
+        border: 1px solid #0293AD;
+        padding: 2px 5px;
+        margin-left: 20px;
+        @include mixin.fs(12);
+      }
+    }
+
+    .form_content {
+      width: calc(100% - 200px);
+
+      @include va.mq(va.$bp_medium) {
+        margin-top: 15px;
+        width: calc(100% - 50px);
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 15px 10px;
+        @include mixin.radius;
+        border: 1px solid #70462E;
+      }
+
+      textarea {
+        min-height: 200px;
+      }
+
+      &.form_content-tel {
+        input {
+          width: 6em;
+        }
+      }
+    }
+  }
+
+  .form_row-center {
+    justify-content: center;
+  }
+}

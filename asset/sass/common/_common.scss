@@ -90,14 +90,13 @@ li {
     right: 0;
     bottom: 0;
     left: 0;
-    background-image: url("/asset/img/menu/pageTitle.png");
+    background-image: url("/wp-content/themes/purebread/asset/img/menu/pageTitle.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     background-color: #b98e51;
     opacity: 0.3;
     z-index: -1;
-
   }
 }
 
@@ -119,5 +118,18 @@ li {
     @include va.mq(va.$bp-medium) {
       font-size: 1.25rem;
     }
+  }
+}
+
+/*-------------------------------------------
+404ページ
+-------------------------------------------*/
+
+.not_found p{
+  font-size: 1.25rem;
+  padding: 2.5rem 1.5rem;
+
+  @include va.mq(va.$bp-medium) {
+    font-size: 1.0rem;
   }
 }

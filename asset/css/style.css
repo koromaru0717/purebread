@@ -91,7 +91,7 @@ li {
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url("/asset/img/menu/pageTitle.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/menu/pageTitle.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -118,6 +118,19 @@ li {
 @media (max-width: 840px) {
   .page_text p {
     font-size: 1.25rem;
+  }
+}
+
+/*-------------------------------------------
+404ページ
+-------------------------------------------*/
+.not_found p {
+  font-size: 1.25rem;
+  padding: 2.5rem 1.5rem;
+}
+@media (max-width: 840px) {
+  .not_found p {
+    font-size: 1rem;
   }
 }
 
@@ -476,7 +489,7 @@ li {
   display: flex;
   align-items: center;
   position: relative;
-  background-image: url("/asset/img/top/top.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/top/top.png");
 }
 @media (max-width: 540px) {
   #first-view {
@@ -495,7 +508,7 @@ li {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url("/asset/img/top/aboutUs.png");
+  background-image: url("/wp-content/themes/purebread/asset/img/top/aboutUs.png");
 }
 @media (max-width: 540px) {
   #about {
@@ -856,6 +869,64 @@ li {
   }
 }
 
+.form .form_row {
+  padding: 15px;
+  width: 100%;
+  display: flex;
+  -js-display: flex;
+}
+@media (max-width: 840px) {
+  .form .form_row {
+    display: block;
+  }
+}
+.form .form_row .form_label {
+  width: 200px;
+  font-size: 14px;
+}
+@media (max-width: 540px) {
+  .form .form_row .form_label {
+    font-size: 14px;
+  }
+}
+.form .form_row .form_label span {
+  color: #0293AD;
+  border: 1px solid #0293AD;
+  padding: 2px 5px;
+  margin-left: 20px;
+  font-size: 12px;
+}
+@media (max-width: 540px) {
+  .form .form_row .form_label span {
+    font-size: 12px;
+  }
+}
+.form .form_row .form_content {
+  width: calc(100% - 200px);
+}
+@media (max-width: 840px) {
+  .form .form_row .form_content {
+    margin-top: 15px;
+    width: calc(100% - 50px);
+  }
+}
+.form .form_row .form_content input,
+.form .form_row .form_content textarea {
+  width: 100%;
+  padding: 15px 10px;
+  border-radius: 5px 5px 5px 5px !important;
+  border: 1px solid #70462E;
+}
+.form .form_row .form_content textarea {
+  min-height: 200px;
+}
+.form .form_row .form_content.form_content-tel input {
+  width: 6em;
+}
+.form .form_row-center {
+  justify-content: center;
+}
+
 /*-------------------------------------------
 ブログトップページ
 -------------------------------------------*/
@@ -1051,7 +1122,7 @@ li {
   display: block;
 }
 .back_btn span {
-  background: url(/asset/img/blogDtl/back.png) left center no-repeat;
+  background: url("/wp-content/themes/purebread/asset/img/blogDtl/back.png") left center no-repeat;
   background-size: 20px auto;
   padding: 0 0 0 38px;
   color: #ffffff;
@@ -1093,7 +1164,7 @@ li {
 }
 
 .block_title {
-  background: url(/asset/img/blogDtl/title.png) center top no-repeat;
+  background: url(/wp-content/themes/purebread/asset/img/blogDtl/title.png) center top no-repeat;
   background-size: 60px auto;
   border-bottom: 1px solid #b98e51;
   padding: 34px 0 12px;

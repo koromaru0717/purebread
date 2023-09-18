@@ -91,7 +91,7 @@
   display: block;
 
   span {
-    background: url(/asset/img/blogDtl/back.png) left center no-repeat;
+    background: url('/wp-content/themes/purebread/asset/img/blogDtl/back.png') left center no-repeat;
     background-size: 20px auto;
     padding: 0 0 0 38px;
     color: #ffffff;
@@ -136,7 +136,7 @@
 }
 
 .block_title {
-  background: url(/asset/img/blogDtl/title.png) center top no-repeat;
+  background: url(/wp-content/themes/purebread/asset/img/blogDtl/title.png) center top no-repeat;
   background-size: 60px auto;
   border-bottom: 1px solid #b98e51;
   padding: 34px 0 12px;
