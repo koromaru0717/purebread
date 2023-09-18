@@ -23,7 +23,7 @@
   <?php wp_body_open(); ?>
   <header id="header">
     <h1 class="site-title">
-      <a href="#"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread"></a>
+      <a href=<?php echo esc_url(home_url('/')); ?>><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/logo.png" alt="purebread"></a>
     </h1>
 
     <nav id="navi">
@@ -31,28 +31,28 @@
 
       <div class="navi__menus">
         <ul class="pages">
-          <li><a href="/index.html">
+          <li><a href=<?php echo esc_url(home_url('/')); ?>>
               <p class="navi-title">ＴＯＰ　ＰＡＧＥ</p>
               <p class="navi-sub-title">トップ</p>
             </a></li>
-          <li><a href="/aboutUs.html">
+          <li><a href=<?php echo esc_url(home_url('/about/')); ?>>
               <p class="navi-title">ＡＢＯＵＴ　ＵＳ</p>
               <p class="navi-sub-title">わたしたちについて</p>
             </a></li>
-          <li><a href="/menu.html">
+          <li><a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <p class="navi-title">ＭＥＮＵ</p>
               <p class="navi-sub-title">メニュー</p>
             </a></li>
-          <li><a href="/blogInfoTop.html">
+          <li><a href=<?php echo esc_url(home_url('/blog/')); ?>>
               <p class="navi-title">ＢＬＯＧ＆ＩＮＦＯ</p>
               <p class="navi-sub-title">ブログ・お知らせ</p>
             </a></li>
-          <li><a href="/index.html#access">
+          <li><a href=<?php echo esc_url(home_url('/#access')); ?>>
               <p class="navi-title">ＡＣＣＥＳＳ</p>
               <p class="navi-sub-title">アクセス</p>
             </a></li>
         </ul>
-        <a class="btn" href="#">お問い合わせ</a>
+        <a class="btn" href=<?php echo esc_url(home_url('/contact')); ?>>お問い合わせ</a>
         <div class="sns-icons">
           <a href="https://www.facebook.com/facebook/?brand_redir=103274306376166"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/facebook-icon.png" alt="Facebook"></a>
           <a href="https://twitter.com/twitterjp?lang=ja"><img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/twitter-icon.png" alt="Twitter"></a>

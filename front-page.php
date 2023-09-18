@@ -15,7 +15,7 @@
       </p>
     </div>
     <div class="btn_area">
-      <a href="/blogInfoTop.html" class="btn">more</a>
+      <a href=<?php echo esc_url(home_url('/about/')); ?> class="btn">more</a>
     </div>
   </div>
 </section>
@@ -64,7 +64,7 @@
 
     <!-- btn_area -->
     <div class="btn_area">
-      <a href="/blogInfoTop.html" class="btn">more</a>
+      <a href=<?php echo esc_url(home_url('/blog/')); ?> class="btn">more</a>
     </div>
     <!-- /btn_area -->
   </div>
@@ -80,7 +80,7 @@
       <div class="left-menu">
         <div class="box-wrap">
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuL.png">
               </div>
@@ -89,14 +89,14 @@
         </div>
         <div class="wrap_col2">
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
             </a>
           </div>
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
@@ -107,14 +107,14 @@
       <div class="right-menu">
         <div class="wrap_col2">
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
             </a>
           </div>
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuS.png">
               </div>
@@ -123,7 +123,7 @@
         </div>
         <div class="box-wrap">
           <div class="box">
-            <a href="./menu.html">
+            <a href=<?php echo esc_url(home_url('/menu/')); ?>>
               <div class="img_box">
                 <img src="<?php echo get_template_directory_uri(); ?>/asset/img/top/menuL.png">
               </div>
@@ -134,7 +134,7 @@
     </div>
     <!-- ボタン -->
     <div class="btn_area">
-      <a href="/menu.html" class="btn">more</a>
+      <a href=<?php echo esc_url(home_url('/menu/')); ?> class="btn">more</a>
     </div>
   </div>
 </section>
